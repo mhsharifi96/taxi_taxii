@@ -20,11 +20,16 @@ class CreatePostsTable extends Migration
             $table->string('tag');
             $table->string('viewCount')->default(0);
             $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->integer('comment_id')->unsigned();
-            $table->foreign('comment_id')->references('id')->on('comments')->onDelete('cascade');
             $table->timestamps();
         });
+
+        Schema::table('posts', function($table) {
+            // if error in migrate commit  
+             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+             $table->foreign('comment_id')->references('id')->on('comments')->onDelete('cascade');
+        });
+
     }
 
     /**
@@ -34,6 +39,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::drop('posts');
     }
 }
