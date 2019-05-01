@@ -18,12 +18,9 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->mediumText('body');
             $table->string('tag');
-            $table->string('viewCount')->default(0);
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->integer('comment_id')->unsigned();
-            $table->foreign('comment_id')->references('id')->on('comments')->onDelete('cascade');
-            $table->timestamps();
+           $table->timestamps();
         });
     }
 
