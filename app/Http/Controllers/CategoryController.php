@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -23,7 +24,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category.create');
     }
 
     /**
@@ -34,7 +35,17 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'slug' => 'required',
+            'name' => 'required',
+
+        ]);
+        $category = new Category;
+        $category->name = $request->input('name');
+        $category->slug = $request->input('slug');
+        $category->save();
+
+        return redirect('categories.create')->with('success', 'category Created');
     }
 
     /**
