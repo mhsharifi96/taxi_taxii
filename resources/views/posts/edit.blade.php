@@ -12,7 +12,21 @@
             {{Form::textarea('body', $post->body, ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
         </div>
         <div class="form-group">
+            {{Form::label('tag', 'tag')}}
+            {{Form::text('tag', $post->tag, ['class' => 'form-control', 'placeholder' => 'Tag'])}}
+        </div>
+        <div class="form-group">
             {{Form::file('cover_image')}}
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <lable for="category_id" class="control-label">دسته</lable>
+                <select class="form-control" name="category_id" id="school_id">
+                    @foreach(\App\Category::latest()->get() as $category)
+                        <option value="{{$category->id}}" > {{$category->name}}</option>
+                    @endforeach
+                </select>
+            </div>
         </div>
         {{Form::hidden('_method','PUT')}}
         {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
