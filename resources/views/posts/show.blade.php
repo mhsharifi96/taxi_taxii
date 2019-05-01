@@ -21,4 +21,31 @@
             {!!Form::close()!!}
         @endif
     @endif
+
+    <hr><hr>
+    <h1>نظر خود را وارد کنید</h1>
+    {!! Form::open(['action' => 'CommentController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+    <div class="form-group">
+        {{Form::label('title', 'Title')}}
+        {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
+    </div>
+    <div class="form-group">
+        {{Form::label('body', 'Body')}}
+        {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
+    </div>
+    <div class="form-group">
+        <input type="hidden" name="comment_body" class="form-control" />
+        <input type="hidden" name="post_id" value="{{ $post->id }}" />
+    </div>
+
+
+
+    {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+    {!! Form::close() !!}
+
+
+    <br><br>
+    @foreach($comments as $comment)
+    <h1>{{$comment->title}}</h1>
+    @endforeach
 @endsection

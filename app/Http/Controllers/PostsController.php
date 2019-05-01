@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Post;
@@ -34,6 +35,7 @@ class PostsController extends Controller
 
         $posts = Post::orderBy('created_at','desc')->paginate(10);
         return view('posts.index')->with('posts', $posts);
+
     }
 
     /**
@@ -83,7 +85,7 @@ class PostsController extends Controller
         $post->tag = $request->input('tag');
         $post->user_id = auth()->user()->id;
         $post->cover_image = $fileNameToStore;
-        $post->category_id = $request->input('category_id');        
+        $post->category_id = $request->input('category_id');
         $post->save();
 
         return redirect('/posts')->with('success', 'Post Created');
@@ -98,7 +100,10 @@ class PostsController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        return view('posts.show')->with('post', $post);
+        $comments=Comment::all()->where('post_id','=',$id);
+
+        return view('posts.show',compact('comments'))->with('post', $post);
+
     }
 
     /**
@@ -150,6 +155,8 @@ class PostsController extends Controller
         // Create Post
         $post = Post::find($id);
         $post->title = $request->input('title');
+        $post->tag = $request->input('tag');
+        $post->category_id = $request->input('category_id');
         $post->body = $request->input('body');
         if($request->hasFile('cover_image')){
             $post->cover_image = $fileNameToStore;
