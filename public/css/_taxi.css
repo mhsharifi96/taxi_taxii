@@ -1,0 +1,40 @@
+.header-banner {
+    /* height: 100vh; */
+     min-height: 100vh;
+    height: 100%; 
+    background-image: url('../image/banner.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text-location {
+    padding-top: 45vh;
+}
+
+.footer-loc {
+    margin-top:1em;
+    padding-top: 1.4em
+}
+
+.context-dark, .bg-gray-dark, .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-list {
+    list-style-type: none;  
+
+}
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+.nav-list li a {
+    color:#ffffff;
+    font-weight: bold;
+}

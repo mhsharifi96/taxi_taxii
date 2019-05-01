@@ -12,14 +12,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+
+    
 </head>
 <body>
     <div id="app">
         @include('inc.navbar')
-        <div class="container">
+        <div class="">
             @include('inc.messages')
             @yield('content')
         </div>
+        @include('inc.footer')
     </div>
 
     <!-- Scripts -->

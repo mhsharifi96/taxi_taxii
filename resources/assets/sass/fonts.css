@@ -1,0 +1,31 @@
+@font-face{
+    font-family: "iranyekan";
+    src: url('../fonts/iranyekanweblight.ttf')format('ttf'),
+    url('../fonts/iranyekanweblight.woff2') format('woff2'),
+    url('../fonts/iranyekanweblight.woff') format('woff'),
+    url('../fonts/iranyekanweblight.eot') format('eot');
+  }
+  * {
+    outline: none;
+    /* -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
+    font-family: iranyekan ;
+    background-color: aqua;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    direction: rtl;
+    -webkit-user-select: auto;  
+    -moz-user-select: auto;     
+    -ms-user-select: auto;      
+    user-select: auto;          
+    -webkit-appearance: none; /* CSS submit button weird rendering on iPad/iPhone */
+  
+    
+  }
