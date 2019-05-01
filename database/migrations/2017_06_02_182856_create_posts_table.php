@@ -19,13 +19,8 @@ class CreatePostsTable extends Migration
             $table->mediumText('body');
             $table->string('tag');
             $table->integer('category_id')->unsigned();
-<<<<<<< HEAD
             $table->integer('comment_id')->unsigned();
             $table->timestamps();
-=======
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-           $table->timestamps();
->>>>>>> ebea0f731fa8bebac7d590699d73aba5f45ec30b
         });
 
         Schema::table('posts', function($table) {
