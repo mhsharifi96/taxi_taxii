@@ -13,7 +13,12 @@
             <p>
                 همین الان مسیرخودتو عوض کن
             </p>
+            @if (Auth::guest())
             <p><a class="btn btn-primary btn-lg" href="/login" role="button">ورود</a> <a class="btn btn-success btn-lg" href="/register" role="button">ثبت نام</a></p>
+        
+            @else
+            <p><a class="btn btn-primary btn-lg" href="/posts/create" role="button">درخواست تاکسی ذهنی</a> </p>
+            @endif
         </div>
     </div>
     <div class="col-md-12">
