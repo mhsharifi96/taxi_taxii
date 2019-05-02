@@ -33,7 +33,7 @@ class PostsController extends Controller
         //$posts = Post::orderBy('title','desc')->take(1)->get();
         //$posts = Post::orderBy('title','desc')->get();
 
-        $posts = Post::orderBy('created_at','desc')->paginate(10);
+        $posts = Post::orderBy('created_at','desc')->where('available','=',1)->paginate(10);
         return view('posts.index')->with('posts', $posts);
 
     }
@@ -59,6 +59,7 @@ class PostsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
+            'tag' => 'required',
             'cover_image' => 'image|nullable|max:1999'
         ]);
 
@@ -100,7 +101,7 @@ class PostsController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        $comments=Comment::all()->where('post_id','=',$id);
+        $comments=Comment::all()->where('available','=',1)->where('post_id','=',$id);
 
         return view('posts.show',compact('comments'))->with('post', $post);
 

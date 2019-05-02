@@ -41,6 +41,23 @@
                             {{Form::text('tag', '', ['class' => 'form-control', 'placeholder' => '#تاکسی #taxii'])}}
                         </div>
                     </div>
+            {{--<select name="tags[]" id="tags" class="form-control" multiple>--}}
+                {{--<div class="form-group{{ $errors->has('tags') ? ' has-error' : '' }}">--}}
+                    {{--{!! Form::label('tags', 'Tag', ['class' => 'col-md-2 control-label']) !!}--}}
+        {{----}}
+                    {{--<div class="col-md-8">--}}
+                        {{--{!! Form::select('tags[]', $tags, $tag, ['class' => 'form-control select2-tags', 'required', 'multiple']) !!}--}}
+        {{----}}
+                        {{--<span class="help-block">--}}
+                    {{--<strong>{{ $errors->first('tags') }}</strong>--}}
+                {{--</span>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+
+
+
+
 
     </div>
         
@@ -51,10 +68,10 @@
         <div>
                 {{Form::submit('ارسال', ['class'=>'btn btn-primary'])}}
         </div>
-        
+
     {!! Form::close() !!}
 
-    
+
 
 </div>
 @endsection

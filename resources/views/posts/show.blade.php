@@ -46,6 +46,7 @@
 
     <br><br>
     @foreach($comments as $comment)
-    <h1>{{$comment->title}}</h1>
+    <h4>{{$comment->title}}</h4>
+    <h5>{!! $comment->body!!}</h5>
     @endforeach
 @endsection
