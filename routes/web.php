@@ -32,3 +32,4 @@ Route::resource('comments','CommentController');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
+Route::get('/search','PostsController@search');
