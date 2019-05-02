@@ -1,5 +1,5 @@
 html, body {
-    height: 100%;
+    /* height: 100%; */
     }
 
 .mian-class {
@@ -59,3 +59,12 @@ html, body {
     .footer, .push {
         height: 4em;
         }
+
+
+.create-class { 
+    padding-top:10vh;
+}
+
+.bold-class{
+    font-weight: bold
+}

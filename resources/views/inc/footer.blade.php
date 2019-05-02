@@ -1,5 +1,5 @@
 
-
+<div>
       <footer class="" style="background: #2d3246;">
             <div class="container footer-loc">
                 <div class="col-md-4">
@@ -21,3 +21,4 @@
                     <a href="https://mdbootstrap.com/education/bootstrap/">linuxkhan.ir</a>
                   </div>
           </footer>
+</div>
