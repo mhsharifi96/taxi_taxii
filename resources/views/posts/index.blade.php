@@ -2,6 +2,21 @@
 
 @section('content')
     <h1>Posts</h1>
+    <div class="page-header head-section">
+        <div class="well">
+            <h>جست و جو</h>
+            <div class="input-group">
+                <form class="search-form" action="/search" method="get">
+                    <input type="text" style="width:79%" name="search" class="form-control">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     @if(count($posts) > 0)
         @foreach($posts as $post)
             <div class="well">
@@ -18,7 +33,7 @@
                 </div>
             </div>
         @endforeach
-        {{$posts->links()}}
+        {{--{{$posts->links()}}--}}
     @else
         <p>No posts found</p>
     @endif

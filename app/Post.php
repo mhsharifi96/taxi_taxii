@@ -25,6 +25,11 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
+    public function scopeSearch($query ,$keyword){
+        $query->where('title','like','%'.$keyword.'%')
+            ->orwhere('body','like','%'.$keyword.'%');
+        return $query;
+    }
 
 
 }

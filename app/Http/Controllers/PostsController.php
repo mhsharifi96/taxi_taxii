@@ -189,4 +189,12 @@ class PostsController extends Controller
         $post->delete();
         return redirect('/posts')->with('success', 'Post Removed');
     }
+
+    public function search(){
+        $keyword=request('search');
+        $posts=Post::search($keyword)->latest()->get();
+        return view('posts.index',compact('posts'));
+    }
+
+
 }
