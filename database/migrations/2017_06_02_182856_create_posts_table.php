@@ -20,13 +20,18 @@ class CreatePostsTable extends Migration
             $table->string('tag');
             $table->boolean( 'available')->default(0);
             $table->integer('category_id')->unsigned();
+
+
+            // $table->integer('comment_id')->unsigned();
             $table->timestamps();
         });
 
         Schema::table('posts', function($table) {
             // if error in migrate commit  
+
              $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             });
+
 
     }
 
