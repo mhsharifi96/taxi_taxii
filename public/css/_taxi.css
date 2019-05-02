@@ -1,5 +1,6 @@
 html, body {
     /* height: 100%; */
+    direction: rtl;
     }
 
 .mian-class {
@@ -10,7 +11,7 @@ html, body {
     /* height: 100vh; */
      min-height: 100vh;
     height: 100%; 
-    background-image: url('../image/banner.jpg');
+    background-image: url('../image/bg.jpg');
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -20,7 +21,7 @@ html, body {
 }
 
 .text-location {
-    padding-top: 45vh;
+    padding-top: 30vh;
 }
 
 .footer-loc {
@@ -67,4 +68,20 @@ html, body {
 
 .bold-class{
     font-weight: bold
+}
+
+
+.error-handler{
+    margin-top:13vh;
+}
+
+
+.header-title{
+    font-weight: bold;
+    color: #ffffff;
+    font-size:56px !important;
+    }
+
+.footer-color { 
+    background-image: linear-gradient(to left, #051937, #051630, #051328, #041021, #010b1a);
 }

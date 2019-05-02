@@ -1,6 +1,6 @@
 
 <div>
-      <footer class="" style="background: #2d3246;">
+      <footer class="footer-color" ">
             <div class="container footer-loc">
                 <div class="col-md-4">
                     <ul class="nav-list">
