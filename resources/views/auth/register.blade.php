@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="padding-top:10%">
+{{-- <div class="container" style="padding-top:10%">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -13,7 +13,7 @@
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">نام</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6">viruxvirux
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus placeholder="نام">
 
                                 @if ($errors->has('name'))
@@ -72,5 +72,89 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
+
+<div class="container">
+    {{-- <br>   --}}
+    
+    
+    {{-- <hr> --}}
+    
+    
+    <div class="row justify-content-center">
+    <div class="col-md-6">
+    <div class="card margin-card">
+    <header class="card-header">
+        {{-- <a href="" class="float-right btn btn-outline-primary mt-1">Log in</a> --}}
+        <h4 class="card-title mt-2">ثبت نام در اولین تاکسی ذهنی در ایران</h4>
+    </header>
+    <article class="card-body">
+    <form>
+        <div class="form-row">
+            <div class="col form-group">
+                <label>نام</label>   
+                  <input type="text" class="form-control" placeholder="">
+            </div> <!-- form-group end.// -->
+            <div class="col form-group">
+                <label>نام خانوادگی</label>
+                  <input type="text" class="form-control" placeholder=" ">
+            </div> <!-- form-group end.// -->
+        </div> <!-- form-row end.// -->
+        <div class="form-group">
+            <label>ایمیل</label>
+            <input type="email" class="form-control" placeholder="">
+            <small class="form-text text-muted">اسپم نمیکنیم :)</small>
+        </div> <!-- form-group end.// -->
+        {{-- <div class="form-group">
+                <label class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" value="option1">
+              <span class="form-check-label"> Male </span>
+            </label>
+            <label class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" value="option2">
+              <span class="form-check-label"> Female</span>
+            </label>
+        </div> <!-- form-group end.// --> --}}
+        {{-- <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>City</label>
+              <input type="text" class="form-control">
+            </div> <!-- form-group end.// -->
+            <div class="form-group col-md-6">
+              <label>Country</label>
+              <select id="inputState" class="form-control">
+                <option> Choose...</option>
+                  <option>Uzbekistan</option>
+                  <option>Russia</option>
+                  <option selected="">United States</option>
+                  <option>India</option>
+                  <option>Afganistan</option>
+              </select>
+            </div> <!-- form-group end.// -->
+        </div> <!-- form-row.// --> --}}
+        <div class="form-group">
+            <label>رمز عبور</label>
+            <input class="form-control" type="password">
+        </div> <!-- form-group end.// -->  
+        <div class="form-group">
+            <label>تکرار رمز عبور</label>
+            <input class="form-control" type="password">
+        </div> 
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Register  </button>
+        </div> <!-- form-group// -->      
+        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
+    </form>
+    </article> <!-- card-body end .// -->
+    <div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
+    </div> <!-- card.// -->
+    </div> <!-- col.//-->
+    
+    </div> <!-- row.//-->
+    
+    
+    </div> 
+    <!--container end.//-->
+    
+    
 @endsection

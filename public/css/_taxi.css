@@ -409,7 +409,19 @@ p {
       cursor: pointer;
       background: #FA6742;
       border-color: #FA6742; }
+/* end footer css */
 
+/* navbar */
+.nav-link-text{
+  font-weight: bold;
+  color:#ffffff !important;
+}
 
+.nav-link-text:hover {
+  color:#ffff00 !important;
+}
 
-
+.margin-card { 
+  margin-top:5%;
+  margin-bottom: 5%;
+}
