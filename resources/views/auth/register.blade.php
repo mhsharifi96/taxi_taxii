@@ -13,7 +13,7 @@
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">نام</label>
 
-                            <div class="col-md-6">viruxvirux
+                            <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus placeholder="نام">
 
                                 @if ($errors->has('name'))
@@ -89,21 +89,38 @@
         <h4 class="card-title mt-2">ثبت نام در اولین تاکسی ذهنی در ایران</h4>
     </header>
     <article class="card-body">
-    <form>
-        <div class="form-row">
-            <div class="col form-group">
-                <label>نام</label>   
-                  <input type="text" class="form-control" placeholder="">
+    <form role="form" method="post" action="{{ route('register') }}">
+        <div class="form-row" >
+            {{ csrf_field() }}
+
+            <div class="col form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                <label for="name">نام</label>   
+                  {{-- <input type="text" class="form-control" placeholder=""> --}}
+                  <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus placeholder="نام">
+                  @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
             </div> <!-- form-group end.// -->
+
             <div class="col form-group">
                 <label>نام خانوادگی</label>
-                  <input type="text" class="form-control" placeholder=" ">
+                  <input type="text" class="form-control" placeholder="فامیلتون">
             </div> <!-- form-group end.// -->
         </div> <!-- form-row end.// -->
-        <div class="form-group">
+
+        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                
             <label>ایمیل</label>
-            <input type="email" class="form-control" placeholder="">
+            {{-- <input type="email" class="form-control" placeholder=""> --}}
+            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required placeholder="ایمیل">
             <small class="form-text text-muted">اسپم نمیکنیم :)</small>
+            @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
         </div> <!-- form-group end.// -->
         {{-- <div class="form-group">
                 <label class="form-check form-check-inline">
@@ -132,21 +149,30 @@
               </select>
             </div> <!-- form-group end.// -->
         </div> <!-- form-row.// --> --}}
-        <div class="form-group">
-            <label>رمز عبور</label>
-            <input class="form-control" type="password">
+        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                
+            <label for="password" class="">رمز عبور</label>
+            
+            <input id="password" type="password" class="form-control" name="password" required placeholder="رمزعبور">
+            @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
         </div> <!-- form-group end.// -->  
         <div class="form-group">
-            <label>تکرار رمز عبور</label>
-            <input class="form-control" type="password">
+            <label for="password-confirm" class="">تکرار پسورد</label>
+            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required placeholder="تایید پسورد">
         </div> 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block"> Register  </button>
+            <button type="submit" class="btn btn-primary btn-block"> ثبت نام </button>
+            
+            
         </div> <!-- form-group// -->      
         <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
     </form>
     </article> <!-- card-body end .// -->
-    <div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
+    <div class="border-top card-body text-center">اکانت دارید؟ <a href="/login">Log In</a></div>
     </div> <!-- card.// -->
     </div> <!-- col.//-->
     

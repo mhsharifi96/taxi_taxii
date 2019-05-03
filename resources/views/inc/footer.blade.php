@@ -39,7 +39,7 @@
                            Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
                         </p>
                         <div class="footer-social-link">
-                            <h3>Follow us</h3>
+                            <h3>ما را دنبال کنید</h3>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -73,7 +73,7 @@
                     <!-- End Footer info -->
                     <div class="footer-awarad">
                         <img src="images/icon/best.png" alt="">
-                        <p>Best Design Company 2019</p>
+                        <p>تاکسی تاکسی 2019</p>
                     </div>
                 </div>
                 <!-- End Col -->
@@ -86,6 +86,7 @@
                                 </div>
                                 <!-- End contact Icon -->
                                 <div class="contact-info">
+                                    
                                     <h3>Jaipur India</h3>
                                     <p>5353 Road Avenue</p>
                                 </div>
@@ -120,7 +121,7 @@
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="#">About us</a>
+                                        <a href="#">درباره ما</a>
                                     </li>
                                     <li>
                                         <a href="#">Services</a>
@@ -129,15 +130,15 @@
                                         <a href="#">Projects</a>
                                     </li>
                                     <li>
-                                        <a href="#">Our Team</a>
+                                        <a href="#">درباره تیم</a>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <a href="#">Contact us</a>
+                                        <a href="#">تماس باما</a>
                                     </li>
                                     <li>
-                                        <a href="#">Blog</a>
+                                        <a href="#">بلاگ</a>
                                     </li>
                                     <li>
                                         <a href="#">Testimonials</a>
@@ -153,11 +154,15 @@
                         <div class="col-md-12 col-lg-6">
                             <div class="footer-widget">
                                 <div class="section-heading">
-                                    <h3>Subscribe</h3>
+                                    <h3>مشترک شوید</h3>
                                     <span class="animate-border border-black"></span>
                                 </div>
-                                <p><!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
-                                Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
+                                <p>
+                                شاید تاکسی ذهنی شما،یک نفر را به مقصد رساند.
+                                <span>
+                                    مشترک شوید
+                                </span>
+                                </p>
                                 <form action="#">
                                     <div class="form-row">
                                         <div class="col dk-footer-form">
@@ -187,7 +192,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <span>Copyright © 2019, All Right Reserved Seobin</span>
+                        <span>Copyright © 2019, All Right surena-project</span>
                     </div>
                     <!-- End Col -->
                     <div class="col-md-6">

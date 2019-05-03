@@ -307,7 +307,7 @@ p {
 .dk-footer-form {
   position: relative; }
   .dk-footer-form input[type=email] {
-    padding: 14px 28px;
+    padding: 24px 66px;
     border-radius: 50px;
     background: #2E2E2E;
     border: 1px solid #2E2E2E; }
@@ -351,7 +351,10 @@ p {
   align-items: center; }
 
 .contact-icon {
-  position: absolute; }
+  /* position: absolute;  */
+  padding: 10px;
+
+  }
   .contact-icon i {
     font-size: 36px;
     top: -5px;
