@@ -50,7 +50,10 @@
 		                    <h4>پست ها</h4>
 		                </div>
 		                <div class="col-md-6 mr-auto" style="text-align:left">
-		                    <button type="button" class="btn btn-sm btn-primary ">درخواست جدید</button>
+                            <a href="posts/create">
+                                <button  type="button"  class="btn btn-sm btn-primary ">درخواست جدید</button>
+                            </a>
+
 		                </div>
 		                
 		            </div>
@@ -69,14 +72,19 @@
                                     <th>موضوع</th>
                                     <th>نویسنده</th>
                                     <th>دسته بندی</th>
-                                    <th>تگ</th>
+                                    {{--<th>تگ</th>--}}
                                     <th>تعداد کامت</th>
-                                    <th>تاریخ</th>
+                                    <th>  تاریخ ایجاد</th>
+                                    <th>وضعیت</th>
                                     <th>ویرایش</th>
-                                    
+
+
                                   </tr>
                                 </thead>
                                 <tbody>
+
+
+                                @foreach($posts as $post)
                                   <tr>
                                     {{-- <td>
                                         <div class="form-check-inline">
@@ -85,38 +93,36 @@
                                            </label>
                                        </div>
                                     </td>   --}}
-                                    <td><a href="#"><small>Johnyahua</small></a></td>
-                                    <td><small>Doe</small></td>
-                                    <td><small>john@example.com</small></td>
-                                    <td><small>Admin</small></td>
-                                    <td><a href="#"><small>5</small></a></td>
-                                    <td><small>Published 2018/05/21</small></td>
+                                    <td><a href="#"><small>{{$post->title}}</small></a></td>
+                                    <td><small>{{$post->user->name}}</small></td>
+                                    <td><small>{{$post->category->name}}</small></td>
+                                    {{--<td><small>Admin</small></td>--}}
+                                    <td><a href="#"><small>
+                                                {{--@foreach($results as $result)--}}
+                                                {{count($results)}}
+                                                {{--@endforeach--}}
+                                                </small></a></td>
+                                    <td><small>{{$post->created_at}}</small></td>
+                                     <td><a href="#"><small>
+                                                 <?php
+                                                 if($post->available=='1'){
+                                                     print ('تایید');
+                                                 }
+                                                 elseif($post->available=='0'){
+                                                     print('تایید نشده');
+                                                 }
+                                                 else{
+                                                     print('در حال بررسی');
+                                                 }
+                                                 ?>
+                                             </small></a></td>
                                     <td>
                                         <a href="#"><i class="fa fa-pencil-square-o"></i></a>
                                         <a href="#"><i class="fa fa-eye"></i></a>
                                         <a href="#"><i class="fa fa-trash"></i></a>
                                     </td>
                                   </tr>
-                                  <tr>
-                                    {{-- <td>
-                                        <div class="form-check-inline">
-                                          <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                           </label>
-                                       </div>
-                                    </td>   --}}
-                                    <td><a href="#"><small>Johnyahua</small></a></td>
-                                    <td><small>Doe</small></td>
-                                    <td><small>john@example.com</small></td>
-                                    <td><small>Admin</small></td>
-                                    <td><a href="#"><small>5</small></a></td>
-                                    <td><small>Published 2018/05/21</small></td>
-                                    <td>
-                                        <a href="#"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a href="#"><i class="fa fa-eye"></i></a>
-                                        <a href="#"><i class="fa fa-trash"></i></a>
-                                    </td>
-                                  </tr>
+                                 @endforeach
                                  
                                  
                                 </tbody>
@@ -130,3 +136,4 @@
 	</div>
 </div>
 @endsection
+
