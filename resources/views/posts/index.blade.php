@@ -30,7 +30,10 @@
                             <div class="card flex-fill shadow">
                                 <img class="card-img-top" src="https://picsum.photos/200/150/?random">
                                 <div class="card-block">
-                                    <h4 class="card-title">{{$post->title}}</h4>
+                                    <a href="/posts/{{$post->id}}">
+                                        <h4 class="card-title">{{$post->title}}</h4>
+                                    </a>
+                                    
                                     <div class="meta">
                                         <a href="#">{{$post->category->name}}</a>
                                     </div>
