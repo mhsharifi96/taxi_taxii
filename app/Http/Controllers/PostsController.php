@@ -1,4 +1,4 @@
-1<?php
+<?php
 
 namespace App\Http\Controllers;
 
@@ -36,7 +36,7 @@ class PostsController extends Controller
         $posts = Post::orderBy('created_at','desc')->where('available','=',1)->paginate(10);
         return view('posts.index')->with('posts', $posts);
 
-    }Comment
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -60,7 +60,7 @@ class PostsController extends Controller
             'title' => 'required',
             'body' => 'required',
             'tag' => 'required',
-            'cover_image' Comment=> 'image|nullable|max:1999'
+            'cover_image'=> 'image|nullable|max:1999'
         ]);
 
         // Handle File Upload
@@ -142,7 +142,7 @@ class PostsController extends Controller
          // Handle File Upload
         if($request->hasFile('cover_image')){
             // Get filename with the extension
-            $filenameWithExt Comment= $request->file('cover_image')->getClientOriginalName();
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
             // Get just filename
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             // Get just ext
