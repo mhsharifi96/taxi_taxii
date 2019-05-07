@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="contai">
     <h1>Posts</h1>
-    <div class="page-header head-section">
+     <div class="page-header head-section">
         <div class="well">
             <h>جست و جو</h>
             <div class="input-group">
@@ -16,15 +17,37 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> 
     @if(count($posts) > 0)
 
-            <section class="blog-area section">
+            {{-- <section class="blog-area section"> --}}
                 <div class="container">
 
                     <div class="row">
                         @foreach($posts as $post)
-                        <div class=" col-md-3">
+
+                        <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mb-4 d-flex">
+                            <div class="card flex-fill shadow">
+                                <img class="card-img-top" src="https://picsum.photos/200/150/?random
+            ">
+                                <div class="card-block">
+                                    <h4 class="card-title">{{$post->title}}</h4>
+                                    <div class="meta">
+                                        <a href="#">{{$post->category->name}}</a>
+                                    </div>
+                                    <div class="card-text">
+                                        <h3 style="    margin-bottom: 4rem;                                        ">
+                                            {!!str_limit($post->body,35)!!}
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer card-footer-fix">
+                                    <small style="float:left">{{$post->user->name}}</small>
+                                    <button class="btn btn-info float-right btn-sm">Follow</button>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- <div class=" col-md-3">
                             <div class="shadow">
                                 <div class="single-post post-style-1" style="padding-bottom: 10px">
 
@@ -44,42 +67,29 @@
 
                                             </a>
                                         </h4>
-
-
                                     </div><!-- blog-info -->
                                 </div><!-- single-post -->
                             </div><!-- card -->
-                        </div><!-- col-lg-4 col-md-6 -->
+                        </div><!-- col-lg-3 col-md- --> --}}
+                            
+                        {{-- add new card --}}
+
+                        
+                       
+                            
+                        
                         @endforeach
                     </div>
                 </div>
-            </section>
+            {{-- </section> --}}
 
-
-
-
-
-
-
-            {{--<div class="well">--}}
-                {{--<div class="row">--}}
-                    {{--<div class="col-md-4 col-sm-4">--}}
-                        {{--<img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-8 col-sm-8">--}}
-                        {{--<h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>--}}
-                        {{--<small>Written on {{$post->created_at}} by {{$post->user->name}}</small>--}}
-                        {{--<h3>{{$post->tag}}</h3>--}}
-                        {{--<h3>{{$post->category->name}}</h3>--}}
-                        {{--<h3>{!!str_limit($post->body, 60)!!}</h3>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-        {{--{{$posts->links()}}--}}
+            <div class="col-md-12">
+        
+            </div>   
     @else
         <p>No posts found</p>
     @endif
+</div>
 @endsection
 
 

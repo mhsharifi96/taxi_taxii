@@ -428,3 +428,15 @@ p {
   margin-top:5%;
   margin-bottom: 5%;
 }
+
+/* card css show  */
+
+.mb-4{
+  margin-bottom: 2rem !important;
+}
+
+.card-footer-fix {
+  position:absolute;
+  bottom:0;
+  width:100%;
+}

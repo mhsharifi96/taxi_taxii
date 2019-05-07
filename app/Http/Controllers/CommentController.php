@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comment;
+
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -45,7 +46,7 @@ class CommentController extends Controller
         $comment->body = $request->input('body');
         $comment->post_id = $request->input('post_id');
         $comment->save();
-
+        
         return back()->with('success', 'comment Created');
         //with('success', 'category Created');
 
