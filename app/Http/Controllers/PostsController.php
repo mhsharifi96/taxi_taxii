@@ -38,14 +38,10 @@ class PostsController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \IlluminateComment\Http\Response
-     */
+
     public function create()
     {
-        return view('postsComment.create');
+        return view('posts.create');
     }
 
     /**
