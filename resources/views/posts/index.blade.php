@@ -28,8 +28,7 @@
 
                         <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mb-4 d-flex">
                             <div class="card flex-fill shadow">
-                                <img class="card-img-top" src="https://picsum.photos/200/150/?random
-            ">
+                                <img class="card-img-top" src="https://picsum.photos/200/150/?random">
                                 <div class="card-block">
                                     <h4 class="card-title">{{$post->title}}</h4>
                                     <div class="meta">
@@ -47,6 +46,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        
                         {{-- <div class=" col-md-3">
                             <div class="shadow">
                                 <div class="single-post post-style-1" style="padding-bottom: 10px">
