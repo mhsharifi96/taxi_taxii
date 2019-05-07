@@ -93,17 +93,28 @@
                                            </label>
                                        </div>
                                     </td>   --}}
-                                    <td><a href="#"><small>{{$post->title}}</small></a></td>
+                                    <td><small>{{$post->title}}</small></td>
                                     <td><small>{{$post->user->name}}</small></td>
                                     <td><small>{{$post->category->name}}</small></td>
                                     {{--<td><small>Admin</small></td>--}}
-                                    <td><a href="#"><small>
+                                    <td><small>
+                                                <?php
+                                                     $count=0;
+                                                    foreach ($results as $result){
+
+                                                        if($result->post_id == $post->id){
+                                                            $count=$count+1;
+                                                        }
+
+                                                    }
+                                                print($count);
+                                                ?>
                                                 {{--@foreach($results as $result)--}}
-                                                {{count($results)}}
+                                                {{--{{count($results)}}--}}
                                                 {{--@endforeach--}}
-                                                </small></a></td>
+                                                </small></td>
                                     <td><small>{{$post->created_at}}</small></td>
-                                     <td><a href="#"><small>
+                                     <td><small>
                                                  <?php
                                                  if($post->available=='1'){
                                                      print ('تایید');
@@ -115,11 +126,18 @@
                                                      print('در حال بررسی');
                                                  }
                                                  ?>
-                                             </small></a></td>
+                                             </small></td>
                                     <td>
-                                        <a href="#"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a href="#"><i class="fa fa-eye"></i></a>
-                                        <a href="#"><i class="fa fa-trash"></i></a>
+                                        <a href="/posts/{{$post->id}}/edit"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a href="/posts/{{$post->id}}"><i class="fa fa-eye"></i></a>
+                                        {{--<a href="{{route('posts.destroy',['id'=>$post->id])}}"><i class="fa fa-trash"></i></a>--}}
+                                        <form action="{{route('posts.destroy',['id'=>$post->id])}}" method="post">
+                                            {{method_field('delete')}}
+                                            {{csrf_field()}}
+                                            <div  class="btn-group btn-group-xs">
+                                                <a type="submit"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                        </form>
                                     </td>
                                   </tr>
                                  @endforeach
