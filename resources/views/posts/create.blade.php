@@ -20,11 +20,8 @@
                     {{-- <label>Tags input with various validation:</label>
                     <input id="form-tags-3" name="tags-3" type="text" value=""> --}}
                     </div>
-
-        
     </div>
     <div class="row">
-
             <div class="col-md-6 col-12">
                     <div class="form-group">
                         <div class="col-sm-12">
@@ -45,7 +42,7 @@
                     </div>
                 </div>
 
-
+    </div>
             {{--<select name="tags[]" id="tags" class="form-control" multiple>--}}
                 {{--<div class="form-group{{ $errors->has('tags') ? ' has-error' : '' }}">--}}
                     {{--{!! Form::label('tags', 'Tag', ['class' => 'col-md-2 control-label']) !!}--}}
@@ -59,7 +56,7 @@
                     {{--</div>--}}
                 {{--</div>--}}
 
-    </div>
+    
 
 
 
