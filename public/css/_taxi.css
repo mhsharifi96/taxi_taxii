@@ -461,8 +461,6 @@ p {
 .tagsinput div input::-moz-placeholder{color:#ccc;opacity:1}
 .tagsinput div input:-ms-input-placeholder{color:#ccc;opacity:1}
 
-<<<<<<< HEAD
-=======
 
 
 /* add tabs */
@@ -636,4 +634,3 @@ div.card .card-header-danger {
   right: -6px;
 }
 /* end comment css */
->>>>>>> ebd00db1e8496735ecb6966892451eddd665517a
