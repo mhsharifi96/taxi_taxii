@@ -12,13 +12,15 @@ $(function() {
 			console.log('change triggered', input, value);
 		}
 	});
-
+	regular=new RegExp('^[\u0600-\u06FF\s+^a-zA-Z]+$') 
 	$('#form-tags-3').tagsInput({
 		'unique': true,
 		'minChars': 2,
 		'maxChars': 10,
 		'limit': 5,
-		'validationPattern': new RegExp('^[a-zA-Z]+$')
+		// 'validationPattern': new RegExp('^[a-zA-Z]+$')
+		'validationPattern': regular
+		// [\u0600-\u06FF\s]
 	});
 
 	$('#form-tags-4').tagsInput({
