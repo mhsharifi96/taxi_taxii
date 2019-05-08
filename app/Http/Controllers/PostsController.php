@@ -85,7 +85,7 @@ class PostsController extends Controller
         $post->category_id = $request->input('category_id');
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post Created');
+        return redirect('/dashboard')->with('success', 'Post Created');
     }
 
     /**

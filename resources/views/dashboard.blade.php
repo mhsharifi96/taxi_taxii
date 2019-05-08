@@ -129,14 +129,25 @@
                                              </small></td>
                                     <td>
                                         <a href="/posts/{{$post->id}}/edit"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a href="/posts/{{$post->id}}"><i class="fa fa-eye"></i></a>
+                                        <a href="/posts/{{$post->id}}"><i style="color: #007bff" class="fa fa-eye"></i></a>
                                         {{--<a href="{{route('posts.destroy',['id'=>$post->id])}}"><i class="fa fa-trash"></i></a>--}}
-                                        <form action="{{route('posts.destroy',['id'=>$post->id])}}" method="post">
-                                            {{method_field('delete')}}
-                                            {{csrf_field()}}
-                                            <div  class="btn-group btn-group-xs">
-                                                <a type="submit"><i class="fa fa-trash"></i></a>
-                                            </div>
+                                        {{--<form action="{{route('posts.destroy',['id'=>$post->id])}}" method="post">--}}
+                                            {{--{{method_field('delete')}}--}}
+                                            {{--{{csrf_field()}}--}}
+                                            {{--<div  class="btn-group btn-group-xs">--}}
+                                                {{--<button type="submit"><i class="fa fa-trash"></i></button>--}}
+                                                {{--<a class="delete_post" href="javascript:void(0);" id="{{$post->id}}">Delete</a>--}}
+                                                {{--<a href="{{ route('posts.destroy', [$post->id]) }}" class="btn btn-xs btn-danger" onclick="return confirm('Are you sure?')">Delete</a>--}}
+                                            {{--</div>--}}
+                                        {{--</form>--}}
+                                        <form id="delete-form" method="POST" action="posts/{{$post->id}}">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+
+                                            <a>
+
+                                                <button style="background-color: white" type="submit" value="Delete user"><i  style="color: #007bff" class="fa fa-trash"></i></button>
+                                            </a>
                                         </form>
                                     </td>
                                   </tr>
@@ -155,3 +166,12 @@
 </div>
 @endsection
 
+<script>
+    $('.post_user').click(function(){
+        if( confirm('Are you sure?') )
+        {
+            var id = $(this).attr('id');
+            // Make an ajax call to delete the record and pass the id to identify the record
+        }
+    });
+</script>
