@@ -24,17 +24,18 @@
     
 </head>
 <body>
-    <div id="app" class="mian-class">
+    {{-- <div id="app" class="mian-class"> --}}
         @include('inc.navbar')
         <div class="wrapper">
             @include('inc.messages')
             @yield('content')
+            @include('inc.footer')
         </div>
-        <div class="push"></div>
-       
-    </div>
+        {{-- <div class="push"></div> --}}
+        
+    {{-- </div> --}}
     
-    @include('inc.footer')
+    {{-- @include('inc.footer') --}}
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

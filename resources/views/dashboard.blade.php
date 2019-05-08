@@ -60,7 +60,7 @@
 		            <div class="row">
 		                <div class="col-md-12">
 		                    <table class="table table-hover ">
-                                <thead class="bg-light ">
+                                <thead class="bg-light">
                                   <tr>
                                     {{-- <th>
                                       <div class="form-check-inline">

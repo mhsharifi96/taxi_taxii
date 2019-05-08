@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="contain">
-    <h1>Posts</h1>
+<div class="container">
+    <h1>آخرین درخواست‌ها</h1>
      {{--<div class="page-header head-section">--}}
         {{--<div class="well">--}}
             {{--<h>جست و جو</h>--}}
@@ -35,7 +35,10 @@
                                     </a>
                                     
                                     <div class="meta">
-                                        <a href="#">{{$post->category->name}}</a>
+                                        {{-- <a href="#">{{$post->category->name}}</a> --}}
+                                        {{$post->category->name}}
+                                            
+
                                     </div>
                                     <div class="card-text">
                                         <h3 style="    margin-bottom: 4rem;                                        ">
@@ -45,7 +48,7 @@
                                 </div>
                                 <div class="card-footer card-footer-fix">
                                     <small style="float:left">{{$post->user->name}}</small>
-                                    <button class="btn btn-info float-right btn-sm">Follow</button>
+                                    <button class="btn btn-info float-right btn-sm">مشاهده</button>
                                 </div>
                             </div>
                         </div>
