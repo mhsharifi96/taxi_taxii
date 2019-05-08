@@ -93,7 +93,7 @@
                                            </label>
                                        </div>
                                     </td>   --}}
-                                    <td><small>{{$post->title}}</small></td>
+                                    <td><small>{!!str_limit($post->title,12)!!}</small></td>
                                     <td><small>{{$post->user->name}}</small></td>
                                     <td><small>{{$post->category->name}}</small></td>
                                     {{--<td><small>Admin</small></td>--}}

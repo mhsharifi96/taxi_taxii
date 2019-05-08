@@ -33,7 +33,8 @@ class PostsController extends Controller
         //$posts = Post::orderBy('title','desc')->take(1)->get();
         //$posts = Post::orderBy('title','desc')->get();
 
-        $posts = Post::orderBy('created_at','desc')->where('available','=',1)->paginate(20);
+
+            $posts = Post::latest()->orderBy('created_at','desc')->where('available','=',1)->paginate(8);
         return view('posts.index')->with('posts', $posts);
 
     }
@@ -80,6 +81,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->tag = $request->input('tag');
+        $post->account = $request->input('account');
         $post->user_id = auth()->user()->id;
         $post->cover_image = $fileNameToStore;
         $post->category_id = $request->input('category_id');
@@ -97,7 +99,7 @@ class PostsController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        if($post->available){
+        if($post->available==1){
             $comments=Comment::all()->where('available','=',1)->where('post_id','=',$id);
             return view('posts.show',compact('comments'))->with('post', $post);
         }
@@ -158,6 +160,7 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->tag = $request->input('tag');
+        $post->account = $request->input('account');
         $post->category_id = $request->input('category_id');
         $post->body = $request->input('body');
         if($request->hasFile('cover_image')){
@@ -194,9 +197,13 @@ class PostsController extends Controller
 
     public function search(){
         $keyword=request('search');
-        $posts=Post::search($keyword)->latest()->get();
-        return view('posts.index',compact('posts'));
+        $posts=Post::search($keyword)->where('available','=',1)->paginate(8);
+                return view('posts.index',compact('posts'));
+
+
+
     }
 
 
 }
+

@@ -89,13 +89,16 @@
                             
                         
                         @endforeach
+
                     </div>
                 </div>
             {{-- </section> --}}
-
             <div class="col-md-12">
-        
-            </div>   
+                <div class="col-md-3" style=" margin-left: auto; margin-right: auto;">
+                    <span> {{ $posts->links( "pagination::bootstrap-4") }}</span>
+                </div>
+
+            </div>
     @else
         <p>No posts found</p>
     @endif
