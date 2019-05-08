@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->mediumText('body');
             $table->string('tag');
-            $table->string('account');
+            $table->string('account')->nullable();
             $table->boolean( 'available')->default(2);
             $table->integer('category_id')->unsigned();
 
