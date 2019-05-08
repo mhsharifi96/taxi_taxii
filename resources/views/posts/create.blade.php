@@ -35,14 +35,11 @@
                     </div>
                 </div>
 
-
-        <div class="col-md-6 col-12">
+        <div class="col-md-6 col-12" style="order:2">
             <div class="form-group">
-                <lable  class="control-label bold-class">عکس</lable>
-                {{Form::file('cover_image')}}
+                {{Form::label('account', 'آيدی شبکه اجتماعی')}}
+                {{Form::text('account', '', ['class' => 'form-control','id' =>'form-tags-3', 'placeholder' => 'آیدی فضای مجازی'])}}
             </div>
-        </div>
-
 
 
     </div>
@@ -59,23 +56,22 @@
                     {{--</div>--}}
                 {{--</div>--}}
 
-    </div>
-    <div class="col-md-6 col-12" style="order:2">
-        <div class="form-group">
-            {{Form::label('account', 'آدیدی فضای مجازی')}}
-            {{Form::text('account', '', ['class' => 'form-control','id' =>'form-tags-3', 'placeholder' => 'آیدی فضای مجازی'])}}
-        </div>
+    
+    
         {{-- <label>Tags input with various validation:</label>
         <input id="form-tags-3" name="tags-3" type="text" value=""> --}}
     </div>
-
-
-
 
         
         <div class="form-group">
             {{Form::label('body', 'توضیحات')}}
             {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'تاکسی تاکسی اولین تاکسی ذهنی در ایران'])}}
+        </div>
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <lable  class="control-label bold-class">عکس</lable>
+                {{Form::file('cover_image')}}
+            </div>
         </div>
         <div>
                 {{Form::submit('ارسال', ['class'=>'btn btn-primary'])}}
@@ -83,7 +79,7 @@
 
     {!! Form::close() !!}
 
-
-
 </div>
+
+
 @endsection
