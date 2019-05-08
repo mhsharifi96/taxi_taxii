@@ -30,7 +30,10 @@
             {{--{!!Form::close()!!}--}}
         {{--@endif--}}
     {{--@endif--}}
-    {{--@if(!Auth)--}}
+    @if(!Auth::guest())
+
+        <small>آیدی: {{$post->account}}</small>
+        @endif
 
     <hr>
     {{-- <h1>نظر خود را وارد کنید</h1> --}}
