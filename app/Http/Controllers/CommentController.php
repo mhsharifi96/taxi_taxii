@@ -49,7 +49,7 @@ class CommentController extends Controller
         $comment->post_id = $request->input('post_id');
         $comment->save();
         
-        return back()->with('success', 'comment Created');
+        return back()->with('success', 'نظرتان ثبت شد');
         //with('success', 'category Created');
 
 

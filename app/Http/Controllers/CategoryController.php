@@ -45,7 +45,7 @@ class CategoryController extends Controller
         $category->slug = $request->input('slug');
         $category->save();
 
-        return redirect('categories.create')->with('success', 'category Created');
+        return redirect('categories.create')->with('success', 'دسته ی جدید ایجاد شد');
     }
 
     /**
