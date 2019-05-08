@@ -59,7 +59,6 @@
                     {{--</div>--}}
                 {{--</div>--}}
 
-<<<<<<< HEAD
     </div>
     <div class="col-md-6 col-12" style="order:2">
         <div class="form-group">
@@ -69,9 +68,6 @@
         {{-- <label>Tags input with various validation:</label>
         <input id="form-tags-3" name="tags-3" type="text" value=""> --}}
     </div>
-=======
-    
->>>>>>> ebd00db1e8496735ecb6966892451eddd665517a
 
 
 

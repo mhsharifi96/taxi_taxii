@@ -50,6 +50,14 @@
                 </div>
 
     </div>
+    <div class="col-md-6 col-12" style="order:2">
+        <div class="form-group">
+            {{Form::label('account', 'آیدی فضای مجازی')}}
+            {{Form::text('account',$post->account, ['class' => 'form-control','id' =>'form-tags-3', 'placeholder' => 'آیدی فضای مجازی'])}}
+        </div>
+        {{-- <label>Tags input with various validation:</label>
+        <input id="form-tags-3" name="tags-3" type="text" value=""> --}}
+    </div>
         <div class="form-group">
             {{Form::label('body', 'Body')}}
             {{Form::textarea('body', $post->body, ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
