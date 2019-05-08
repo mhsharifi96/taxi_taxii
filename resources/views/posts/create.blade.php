@@ -21,6 +21,8 @@
                     <input id="form-tags-3" name="tags-3" type="text" value=""> --}}
                     </div>
 
+
+
         
     </div>
     <div class="row">
@@ -38,12 +40,15 @@
                     </div>
                 </div>
 
-            <div class="col-md-6 col-12">
-                    <div class="form-group">
-                            <lable  class="control-label bold-class">عکس</lable>  
-                        {{Form::file('cover_image')}}
-                    </div>
-                </div>
+
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <lable  class="control-label bold-class">عکس</lable>
+                {{Form::file('cover_image')}}
+            </div>
+        </div>
+
+
 
 
             {{--<select name="tags[]" id="tags" class="form-control" multiple>--}}
@@ -59,6 +64,14 @@
                     {{--</div>--}}
                 {{--</div>--}}
 
+    </div>
+    <div class="col-md-6 col-12" style="order:2">
+        <div class="form-group">
+            {{Form::label('account', 'آدیدی فضای مجازی')}}
+            {{Form::text('account', '', ['class' => 'form-control','id' =>'form-tags-3', 'placeholder' => 'آیدی فضای مجازی'])}}
+        </div>
+        {{-- <label>Tags input with various validation:</label>
+        <input id="form-tags-3" name="tags-3" type="text" value=""> --}}
     </div>
 
 
