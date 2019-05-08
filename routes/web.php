@@ -30,6 +30,7 @@ Route::resource('posts', 'PostsController');
 Route::resource('categories','CategoryController');
 Route::resource('comments','CommentController');
 Route::resource('contact','ContactController');
+Route::resource('footer','FooterController');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
