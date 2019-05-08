@@ -29,15 +29,16 @@
                         <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mb-4 d-flex">
                             <div class="card flex-fill shadow">
                                 <img class="card-img-top" src="https://picsum.photos/200/150/?random">
+
                                 <div class="card-block">
                                     <a href="/posts/{{$post->id}}">
-                                        <h4 class="card-title">{{$post->title}}</h4>
+                                        <h4 class="card-title" style="text-align:center">{{$post->title}}</h4>
                                     </a>
                                     
                                     <div class="meta">
                                         {{-- <a href="#">{{$post->category->name}}</a> --}}
                                         {{$post->category->name}}
-                                            
+
 
                                     </div>
                                     <div class="card-text">
