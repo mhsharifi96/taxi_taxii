@@ -42,12 +42,12 @@
                             <h3>ما را دنبال کنید</h3>
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="facebook.com/taxi.taxii.11">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="www.twitter.com/taxitaxii1">
                                         <i class="fa fa-twitter"></i>
                                     </a>
                                 </li>
@@ -57,13 +57,18 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="www.linkedin.com/in/taxi-taxii">
                                         <i class="fa fa-linkedin"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="aparat.com/taxi_taxii">
+                                        <i class="fa fa-aparat"></i>
                                     </a>
                                 </li>
                             </ul>
