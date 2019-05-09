@@ -87,8 +87,8 @@
                                 <!-- End contact Icon -->
                                 <div class="contact-info">
                                     
-                                    <h3>Jaipur India</h3>
-                                    <p>5353 Road Avenue</p>
+                                    <h3>کاشان</h3>
+                                    <p>بلوار مادر</p>
                                 </div>
                                 <!-- End Contact Info -->
                             </div>
@@ -102,8 +102,8 @@
                                 </div>
                                 <!-- End contact Icon -->
                                 <div class="contact-info">
-                                    <h3>95 711 9 5353</h3>
-                                    <p>Give us a call</p>
+                                    <h3>03155579059</h3>
+                                    <p>با ما تماس بگیرید</p>
                                 </div>
                                 <!-- End Contact Info -->
                             </div>
@@ -116,7 +116,7 @@
                         <div class="col-md-12 col-lg-6">
                             <div class="footer-widget footer-left-widget">
                                 <div class="section-heading">
-                                    <h3>Useful Links</h3>
+                                    <h3>لینک‌های مفید</h3>
                                     <span class="animate-border border-black"></span>
                                 </div>
                                 <ul>

@@ -168,7 +168,7 @@ class PostsController extends Controller
         }
         $post->save();
 
-        return redirect('/posts')->with('success', 'درخواست تان به روز رسانی شد');
+        return redirect('/dashboard')->with('success', 'درخواست شما ثبت گردید:)');
     }
 
     /**
@@ -192,7 +192,7 @@ class PostsController extends Controller
         }
         
         $post->delete();
-        return redirect('/posts')->with('success', 'درخواستتان حذف شد');
+        return redirect('/dashboard')->with('success', 'درخواستتان حذف شد');
     }
 
     public function search(){

@@ -98,9 +98,9 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {{-- <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a> --}}
-                <a class="dropdown-item" href="/login">ورود</a>
+                <a class="dropdown-item" style="text-align:right" href="/login">ورود</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/register">ثبت نام</a>
+                <a class="dropdown-item" style="text-align:right" href="/register">ثبت نام</a>
               </div>
             </li>
             @else
@@ -111,9 +111,9 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   {{-- <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="#">Another action</a> --}}
-                  <a class="dropdown-item" href="/dashboard">داشبورد</a>
+                  <a class="dropdown-item" style="text-align:right" href="/dashboard">داشبورد</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{{ route('logout') }}"
+                  <a class="dropdown-item" style="text-align:right" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
                             خروج

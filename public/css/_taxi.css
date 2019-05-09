@@ -641,3 +641,11 @@ div.card .card-header-danger {
   right: -6px;
 }
 /* end comment css */
+
+
+
+.alarm-account {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}

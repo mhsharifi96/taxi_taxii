@@ -59,6 +59,7 @@
 		            </div>
 		            <div class="row">
 		                <div class="col-md-12">
+                            @if(count($posts)>0)
 		                    <table class="table table-hover ">
                                 <thead class="bg-light">
                                   <tr>
@@ -156,6 +157,11 @@
                                  
                                 </tbody>
                               </table>
+                              @else
+                              <h5>درحال حاضر درخواستی جهت نمایش وجود ندارد.
+                              <img src="{{url('/image/sad.png')}}" alt="" style="width:10%">
+                              </h5>
+                              @endif
 		                </div>
 		            </div>
 		        </div>

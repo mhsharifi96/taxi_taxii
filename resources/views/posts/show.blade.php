@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <a href="/posts" class="btn btn-default">Go Back</a>
+    {{-- <a href="/posts" class="btn btn-default">بازگشت</a> --}}
     <h1>{{$post->title}}</h1>
     <div class="col-md-12">
         <div class="row">
@@ -11,7 +11,22 @@
             </div>
             <div class="col-md-4">
                     {{-- <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}"> --}}
-                    <img class="card-img-top" src="https://picsum.photos/200/150/?random">
+                    <div class="col-md-12">
+                        <img class="card-img-top" src="https://picsum.photos/200/150/?random">
+                    </div>
+                    <div class="col-md-12">
+                        <p style="text-align:center">
+                            ایدی/ایمیل مسافر:
+                            @if(!Auth::guest())
+                            <span>
+                            {{$post->account}}
+                            </span>
+                            @else
+                            <p class="alarm-account">برای مشاهده ابتدا در سایت عضو شوید :/</p>
+                            @endif
+                        </p>
+                    </div>
+                    
             </div>
         </div>
     </div>
@@ -115,7 +130,7 @@
                                         <h4>{{$comment->title}}</h4>
                                         <h5>{!! $comment->body!!}</h5>
                                         @endforeach --}}
-                                        @if(!Auth::guest())
+                                        @if(count($comments)>0)
                                         @foreach($comments as $comment)
                                         <div class="media comment-box">
                                                 <div class="media-left">
