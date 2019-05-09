@@ -20,6 +20,11 @@ html, body {
     background-repeat: no-repeat;
 }
 
+.index-text {
+  font-weight: bold;
+  color: #ffffff;
+}
+
 .text-location {
     padding-top: 30vh;
 }
@@ -105,9 +110,11 @@ body { color: #ccc }
     margin-bottom: 27px;
 }
 p {
-    font-family: 'Nunito', sans-serif;
+    /* font-family: 'Nunito', sans-serif; */
     font-size: 16px;
     line-height: 28px;
+    text-align: justify;
+
 }
 
    .animate-border {

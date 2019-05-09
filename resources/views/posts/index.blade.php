@@ -49,7 +49,10 @@
                                 </div>
                                 <div class="card-footer card-footer-fix">
                                     <small style="float:left">{{$post->user->name}}</small>
-                                    <button class="btn btn-info float-right btn-sm">مشاهده</button>
+                                    <a href="/posts/{{$post->id}}">
+                                        <button class="btn btn-info float-right btn-sm">مشاهده</button>
+                                    </a>
+                                    
                                 </div>
                             </div>
                         </div>

@@ -54,14 +54,14 @@
                                                     دیدگاه‌
                                                 </a>
                                         </li>
-                                        @if(!Auth::guest())
+                                        
                                         <li class="nav-item">
                                             <a class="nav-link " href="#profile" data-toggle="tab">
                                                     ارسال دیدگاه
                                                 
                                             </a>
                                         </li>
-                                        @endif
+                                        
                                         
                                         {{-- <li class="nav-item">
                                             <a class="nav-link" href="#settings" data-toggle="tab">
@@ -76,7 +76,9 @@
                         </div>
                         <div class="card-body ">
                             <div class="tab-content text-center">
+                                
                                 <div class="tab-pane" id="profile">
+                                    @if(!Auth::guest())
                                     <h1>دیدگاه خود را وارد کنید</h1>
                                     {!! Form::open(['action' => 'CommentController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                                     <div class="form-group">
@@ -97,7 +99,15 @@
                                     </div>
                                     {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
                                     {!! Form::close() !!}
-            
+                                    @else
+                                    <div class="col-md-12">
+                                        <p>
+                                            برای ثبت نظر <a href="/register">عضو شوید</a>
+                                        </p>
+                                        <p>
+                                        </p>
+                                    </div>
+                                    @endif
             
                                 </div>
                                 <div class="tab-pane active" id="messages">
@@ -105,6 +115,7 @@
                                         <h4>{{$comment->title}}</h4>
                                         <h5>{!! $comment->body!!}</h5>
                                         @endforeach --}}
+                                        @if(!Auth::guest())
                                         @foreach($comments as $comment)
                                         <div class="media comment-box">
                                                 <div class="media-left">
@@ -121,6 +132,12 @@
                                                 </div>
                                             </div>
                                         @endforeach
+                                        @else
+                                        <p>متاسفانه دیدگاهی برای نمایش وجود ندارد
+                                            <img src="{{url('/image/sad.png')}}" alt="surena" style="width: 64px;">
+                                        </p>
+                                        
+                                        @endif
                                         
                                 </div>
                                 {{-- <div class="tab-pane" id="settings">
