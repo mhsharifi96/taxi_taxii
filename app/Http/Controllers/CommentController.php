@@ -37,17 +37,19 @@ class CommentController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
+            'name' => 'required',
             'body' => 'required',
+            'email' => 'required',
 
         ]);
         $comment = new Comment;
-        $comment->title = $request->input('title');
+        $comment->name = $request->input('name');
+        $comment->email = $request->input('email');
         $comment->body = $request->input('body');
         $comment->post_id = $request->input('post_id');
         $comment->save();
         
-        return back()->with('success', 'comment Created');
+        return back()->with('success', 'نظرتان ثبت شد');
         //with('success', 'category Created');
 
 

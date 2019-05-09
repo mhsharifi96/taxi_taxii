@@ -87,7 +87,7 @@ class PostsController extends Controller
         $post->category_id = $request->input('category_id');
         $post->save();
 
-        return redirect('/dashboard')->with('success', 'Post Created');
+        return redirect('/dashboard')->with('success', 'درخواستتان ایجاد شد');
     }
 
     /**
@@ -122,7 +122,7 @@ class PostsController extends Controller
 
         // Check for correct user
         if(auth()->user()->id !==$post->user_id){
-            return redirect('/posts')->with('error', 'Unauthorized Page');
+            return redirect('/posts')->with('error', 'صفحه غیر مجاز');
         }
 
         return view('posts.edit')->with('post', $post);
@@ -168,7 +168,7 @@ class PostsController extends Controller
         }
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post Updated');
+        return redirect('/posts')->with('success', 'درخواست تان به روز رسانی شد');
     }
 
     /**
@@ -192,7 +192,7 @@ class PostsController extends Controller
         }
         
         $post->delete();
-        return redirect('/posts')->with('success', 'Post Removed');
+        return redirect('/posts')->with('success', 'درخواستتان حذف شد');
     }
 
     public function search(){

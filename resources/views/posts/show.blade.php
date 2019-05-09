@@ -54,12 +54,14 @@
                                                     دیدگاه‌
                                                 </a>
                                         </li>
+                                        @if(!Auth::guest())
                                         <li class="nav-item">
                                             <a class="nav-link " href="#profile" data-toggle="tab">
                                                     ارسال دیدگاه
                                                 
                                             </a>
                                         </li>
+                                        @endif
                                         
                                         {{-- <li class="nav-item">
                                             <a class="nav-link" href="#settings" data-toggle="tab">
@@ -78,8 +80,12 @@
                                     <h1>دیدگاه خود را وارد کنید</h1>
                                     {!! Form::open(['action' => 'CommentController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                                     <div class="form-group">
-                                        {{Form::label('title', 'Title')}}
-                                        {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
+                                        {{Form::label('name', 'name')}}
+                                        {{Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'name'])}}
+                                    </div>
+                                    <div class="form-group">
+                                        {{Form::label('email', 'email')}}
+                                        {{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'email'])}}
                                     </div>
                                     <div class="form-group">
                                         {{Form::label('body', 'دیدگاه')}}
@@ -108,7 +114,7 @@
                                                 </div>
                                                 <div class="media-body">
                                                     {{-- <h4 class="">{{$comment->title}}</h4> --}}
-                                                    <h4 class="media-heading">{{$comment->title}}</h4>
+                                                    <h4 class="media-heading">{{$comment->name}}</h4>
                                                     <h5>{!! $comment->body!!}</h5>
                                                     {{-- <p>sdfsdf</p> --}}
                                                   

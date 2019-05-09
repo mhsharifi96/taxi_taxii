@@ -42,12 +42,12 @@
                             <h3>ما را دنبال کنید</h3>
                             <ul>
                                 <li>
-                                    <a href="facebook.com/taxi.taxii.11">
+                                    <a href="http://www.facebook.com/taxi.taxii.11">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="www.twitter.com/taxitaxii1">
+                                    <a href="http://www.twitter.com/taxitaxii1">
                                         <i class="fa fa-twitter"></i>
                                     </a>
                                 </li>
@@ -57,18 +57,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="www.linkedin.com/in/taxi-taxii">
+                                    <a href="http://www.linkedin.com/in/taxi-taxii">
                                         <i class="fa fa-linkedin"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="aparat.com/taxi_taxii">
-                                        <i class="fa fa-aparat"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -168,14 +163,29 @@
                                     مشترک شوید
                                 </span>
                                 </p>
-                                <form action="#">
+                            {{--{!! Form::open(['action' => 'FooterController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}--}}
+                                {{--<div class="col-md-6 col-12">--}}
+                                    {{--<div class="form-group">--}}
+                                        {{--{{Form::label('email', 'ایمیل')}}--}}
+
+                                        {{--{{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'ایمیل'])}}--}}
+                                        {{--{{Form::submit('ارسال', ['class'=>'btn btn-primary'])}}--}}
+                                    {{--</div>--}}
+
+                                {{--</div>--}}
+                            {{--{!! Form::close() !!}--}}
+
+                                <form action="{{route('footer.store')}}" method="post">
+                                    {{csrf_field()}}
                                     <div class="form-row">
-                                        <div class="col dk-footer-form">
-                                            <input type="email" class="form-control" placeholder="Email Address">
-                                            <button type="submit">
-                                                <i class="fa fa-send"></i>
-                                            </button>
+                                        <div class="col dk-footer-form" style="padding-left: 0;">
+                                            <input  type="text" class="form-control" name="email" id="email" placeholder="ایمیل را وارد کنید">
+
                                         </div>
+                                        <button type="submit" style="background-color: #3097D1;color: white">
+                                            <i class="fa fa-send"></i>
+                                        </button>
+
                                     </div>
                                 </form>
                                 <!-- End form -->
