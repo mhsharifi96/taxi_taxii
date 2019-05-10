@@ -20,28 +20,36 @@ class DashboardController extends Controller
         $this->middleware('auth');
     }
 
+    public function index(){
+
+    }
+
+
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function show()
     {
 
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
 
         //$comments=Comment::all();
-
+        $posts=Post::latest()->orderBy('created_at','desc')->where('user_id','=',$user_id)->paginate(2);
 
         $results =DB::select('SELECT *  FROM comments as co
         INNER JOIN posts as po ON co.post_id = po.id
         INNER JOIN users  as us ON po.user_id = us.id
         where us.id =?',[$user_id]);
 
+//        paginate(8);
 
 
-        $posts=$user->Posts;
+
+        //$posts=$user->Posts;
+
 
 
         //return $results;

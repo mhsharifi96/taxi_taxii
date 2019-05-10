@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use SEOMeta;
+use Twitter;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function index(){
+        SEOMeta::setTitle('sursiz');
+        SEOMeta::setDescription('اولین تاکسی ذهنی درایران');
+        Twitter::setTitle('Homepage');
+        Twitter::setSite('@taxitaxii1');
+
+
         $title = 'Welcome To Laravel!';
         //return view('pages.index', compact('title'));
         return view('pages.index')->with('title', $title);

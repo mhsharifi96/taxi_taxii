@@ -33,5 +33,5 @@ Route::resource('contact','ContactController');
 Route::resource('footer','FooterController');
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index');
+Route::get('/dashboard', 'DashboardController@show');
 Route::get('/search','PostsController@search');
