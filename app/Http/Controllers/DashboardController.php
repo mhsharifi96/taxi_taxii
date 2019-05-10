@@ -37,14 +37,13 @@ class DashboardController extends Controller
         $user = User::find($user_id);
 
         //$comments=Comment::all();
-        $posts=Post::latest()->orderBy('created_at','desc')->where('user_id','=',$user_id)->paginate(2);
+        $posts=Post::latest()->orderBy('created_at','desc')->where('user_id','=',$user_id)->paginate(5);
 
         $results =DB::select('SELECT *  FROM comments as co
         INNER JOIN posts as po ON co.post_id = po.id
         INNER JOIN users  as us ON po.user_id = us.id
         where us.id =?',[$user_id]);
 
-//        paginate(8);
 
 
 

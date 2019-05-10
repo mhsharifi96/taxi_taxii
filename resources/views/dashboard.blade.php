@@ -165,12 +165,19 @@
                               <img src="{{url('/image/sad.png')}}" alt="" style="width:10%">
                               </h5>
                               @endif
+
+
 		                </div>
 		            </div>
 		        </div>
 		    </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-12">
+            <div class="col-md-3" style=" margin-left: auto; margin-right: auto;">
+                <span> {{ $posts->links( "pagination::bootstrap-4") }}</span>
+            </div>
+
+        </div>
 	</div>
 </div>
 @endsection
