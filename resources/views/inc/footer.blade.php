@@ -33,11 +33,13 @@
                 <div class="col-md-12 col-lg-4">
                     <div class="dk-footer-box-info">
                         <a href="index.html" class="footer-logo">
-                            <img src="images/footer_logo.png" alt="footer_logo" class="img-fluid">
+                            {{-- <img src="images/footer_logo.png" alt="footer_logo" class="img-fluid"> --}}
+                            <img src="{{url('/image/logo.png')}}" alt="footer_logo" class="img-fluid">
+                            {{-- <img src="{{url('/image/logo.png')}}" alt="" style="width:20%"> --}}
                         </a>
-                        <p class="footer-info-text">
+                        {{-- <p class="footer-info-text">
                            Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
-                        </p>
+                        </p> --}}
                         <div class="footer-social-link">
                             <h3>ما را دنبال کنید</h3>
                             <ul>
@@ -73,7 +75,7 @@
                     <!-- End Footer info -->
                     <div class="footer-awarad">
                         <img src="images/icon/best.png" alt="">
-                        <p>تاکسی تاکسی 2019</p>
+                        <p>MAKE YOUR WAY FASTER</p>
                     </div>
                 </div>
                 <!-- End Col -->
@@ -157,7 +159,7 @@
                                     <h3>مشترک شوید</h3>
                                     <span class="animate-border border-black"></span>
                                 </div>
-                                <p>
+                                <p style="color:#ffff">
                                 شاید تاکسی ذهنی شما،یک نفر را به مقصد رساند.
                                 <span>
                                     مشترک شوید
