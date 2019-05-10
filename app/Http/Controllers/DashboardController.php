@@ -20,9 +20,6 @@ class DashboardController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
-
-    }
 
 
     /**
@@ -30,7 +27,7 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function index()
     {
 
         $user_id = auth()->user()->id;
