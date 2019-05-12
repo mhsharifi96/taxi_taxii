@@ -40,6 +40,13 @@
                         {{-- <p class="footer-info-text">
                            Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
                         </p> --}}
+                        <p class="footer-info-text">
+                            هم فکر و هم مسیرتو پیدا کن
+                        </p>
+                        <p class="footer-info-text">
+                            مسیر موفقیت رو کوتاه کن
+
+                        </p>
                         <div class="footer-social-link">
                             <h3>ما را دنبال کنید</h3>
                             <ul>

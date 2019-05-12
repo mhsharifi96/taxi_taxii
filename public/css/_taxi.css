@@ -268,7 +268,9 @@ p {
     padding-top: 15px; }
 
 .footer-info-text {
-  margin: 26px 0 32px; }
+  /* margin: 26px 0 32px; */
+  color: #ffff;
+  font-weight: bold; }
 
 .footer-left-widget {
   padding-left: 80px; }
