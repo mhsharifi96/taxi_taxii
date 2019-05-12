@@ -131,6 +131,9 @@
                                     <td>
                                         <a href="/posts/{{$post->id}}/edit"><i class="fa fa-pencil-square-o"></i></a>
                                         <a href="/posts/{{$post->id}}"><i style="color: #007bff" class="fa fa-eye"></i></a>
+
+
+                                        {{--delete in dashboard page--}}
                                         {{--<a href="{{route('posts.destroy',['id'=>$post->id])}}"><i class="fa fa-trash"></i></a>--}}
                                         {{--<form action="{{route('posts.destroy',['id'=>$post->id])}}" method="post">--}}
                                             {{--{{method_field('delete')}}--}}
@@ -141,15 +144,15 @@
                                                 {{--<a href="{{ route('posts.destroy', [$post->id]) }}" class="btn btn-xs btn-danger" onclick="return confirm('Are you sure?')">Delete</a>--}}
                                             {{--</div>--}}
                                         {{--</form>--}}
-                                        <form id="delete-form" method="POST" action="posts/{{$post->id}}">
-                                            {{ csrf_field() }}
-                                            {{ method_field('DELETE') }}
+                                        {{--<form id="delete-form" method="POST" action="posts/{{$post->id}}">--}}
+                                            {{--{{ csrf_field() }}--}}
+                                            {{--{{ method_field('DELETE') }}--}}
 
-                                            <a>
+                                            {{--<a>--}}
 
-                                                <button style="background-color: white" type="submit" value="Delete user"><i  style="color: #007bff" class="fa fa-trash"></i></button>
-                                            </a>
-                                        </form>
+                                                {{--<button style="background-color: white" type="submit" value="Delete user"><i  style="color: #007bff" class="fa fa-trash"></i></button>--}}
+                                            {{--</a>--}}
+                                        {{--</form>--}}
                                     </td>
                                   </tr>
                                  @endforeach
@@ -162,12 +165,19 @@
                               <img src="{{url('/image/sad.png')}}" alt="" style="width:10%">
                               </h5>
                               @endif
+
+
 		                </div>
 		            </div>
 		        </div>
 		    </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-12">
+            <div class="col-md-3" style=" margin-left: auto; margin-right: auto;">
+                <span> {{ $posts->links( "pagination::bootstrap-4") }}</span>
+            </div>
+
+        </div>
 	</div>
 </div>
 @endsection

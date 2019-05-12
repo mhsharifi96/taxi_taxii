@@ -15,18 +15,22 @@
                         {{-- <img class="card-img-top" src="https://picsum.photos/200/150/?random"> --}}
                         <img style="width:100%" class="card-img-top" src="/storage/cover_images/{{$post->cover_image}}">
                     </div>
+                @if(!$post->account  ==null)
                     <div class="col-md-12">
                         <p style="text-align:center">
                             ایدی/ایمیل مسافر:
                             @if(!Auth::guest())
+
                             <span>
                             {{$post->account}}
                             </span>
+
                             @else
                             <p class="alarm-account">برای مشاهده ابتدا در سایت عضو شوید :/</p>
                             @endif
                         </p>
                     </div>
+                @endif
                     
             </div>
         </div>
@@ -46,10 +50,11 @@
             {{--{!!Form::close()!!}--}}
         {{--@endif--}}
     {{--@endif--}}
+    @if(!$post->account  ==null)
     @if(!Auth::guest())
-
         <small>آیدی: {{$post->account}}</small>
-        @endif
+    @endif
+    @endif
 
     <hr>
     {{-- <h1>نظر خود را وارد کنید</h1> --}}
@@ -97,14 +102,18 @@
                                     @if(!Auth::guest())
                                     <h1>دیدگاه خود را وارد کنید</h1>
                                     {!! Form::open(['action' => 'CommentController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-                                    <div class="form-group">
-                                        {{Form::label('name', 'name')}}
-                                        {{Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'name'])}}
-                                    </div>
-                                    <div class="form-group">
-                                        {{Form::label('email', 'email')}}
-                                        {{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'email'])}}
-                                    </div>
+                                    {{--<div class="form-group">--}}
+                                        {{--{{Form::label('name', 'name')}}--}}
+                                        {{--{{Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'name'])}}--}}
+                                    {{--</div>--}}
+                                    {{--<div class="form-group">--}}
+                                        {{--{{Form::label('email', 'email')}}--}}
+                                        {{--{{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'email'])}}--}}
+                                    {{--</div>--}}
+                                        <div class="form-group">
+                                            <input type="hidden" name="comment_body" class="form-control" />
+                                            <input type="hidden" name="user_id" value="{{ $user->id }}" />
+                                        </div>
                                     <div class="form-group">
                                         {{Form::label('body', 'دیدگاه')}}
                                         {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'دیدگاه'])}}
@@ -141,7 +150,7 @@
                                                 </div>
                                                 <div class="media-body">
                                                     {{-- <h4 class="">{{$comment->title}}</h4> --}}
-                                                    <h4 class="media-heading">{{$comment->name}}</h4>
+                                                    <h4 class="media-heading">{{$comment->user->name}}</h4>
                                                     <h5>{!! $comment->body!!}</h5>
                                                     {{-- <p>sdfsdf</p> --}}
                                                   

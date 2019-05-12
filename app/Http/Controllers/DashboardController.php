@@ -20,6 +20,8 @@ class DashboardController extends Controller
         $this->middleware('auth');
     }
 
+
+
     /**
      * Show the application dashboard.
      *
@@ -32,7 +34,7 @@ class DashboardController extends Controller
         $user = User::find($user_id);
 
         //$comments=Comment::all();
-
+        $posts=Post::latest()->orderBy('created_at','desc')->where('user_id','=',$user_id)->paginate(5);
 
         $results =DB::select('SELECT *  FROM comments as co
         INNER JOIN posts as po ON co.post_id = po.id
@@ -41,7 +43,9 @@ class DashboardController extends Controller
 
 
 
-        $posts=$user->Posts;
+
+        //$posts=$user->Posts;
+
 
 
         //return $results;

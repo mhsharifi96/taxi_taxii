@@ -13,7 +13,9 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
+//    'failed' => 'These credentials do not match our recor.',
+    'failed' => 'پسوردتان منطبق نمی باشد.',
+//    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];
