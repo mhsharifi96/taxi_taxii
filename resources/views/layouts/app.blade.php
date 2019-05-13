@@ -25,7 +25,7 @@
     {!! SEO::generate('true') !!}
     
 </head>
-<body>
+<body >
     {{-- <div id="app" class="mian-class"> --}}
         @include('inc.navbar')
         <div class="wrapper">
