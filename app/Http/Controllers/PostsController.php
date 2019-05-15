@@ -136,9 +136,9 @@ class PostsController extends Controller
         $post = Post::find($id);
 
         // Check for correct user
-        if(auth()->user()->id !==$post->user_id){
-            return redirect('/posts')->with('error', 'صفحه غیر مجاز');
-        }
+//        if(auth()->user()->id !==$post->user_id){
+//            return redirect('/posts')->with('error', 'صفحه غیر مجاز');
+//        }
 
         return view('posts.edit')->with('post', $post);
     }
