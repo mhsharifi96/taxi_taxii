@@ -44,7 +44,7 @@
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
 		    <div class="card margin-card">
-		        <div class="card-body">
+		        <div class="card-body" style="min-height:55vh;">
 		            <div class="row">
 		                <div class="col-md-2 border-right">
 		                    <h4>پست ها</h4>
