@@ -662,15 +662,25 @@ div.card .card-header-danger {
   padding-left: 15px; */
 }
 
+.th-size { 
+  text-align: center;
+}
+.td-conf { 
+  text-align: center;
+}
 
 /* responsive media for dashboard page */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 539px) {
   .col-show  {
     display: none;
   }
 
   .th-size{
     font-size:9px;
+  }
+
+  .form-control-search { 
+    width:70% !important;
   }
 
 }
