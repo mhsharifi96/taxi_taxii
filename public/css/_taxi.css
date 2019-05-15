@@ -674,15 +674,12 @@ div.card .card-header-danger {
     font-size:9px;
   }
 
-<<<<<<< HEAD
-}
-#team .member {
-  text-align: center;
-  margin-bottom: 20px;
-=======
   .form-control-search { 
     width:70% !important;
   }
 
->>>>>>> 26b516af4e05199e26d99cc6f0562ac4b668d571
 }
+
+#team .member {
+  text-align: center;
+  margin-bottom: 20px;}
