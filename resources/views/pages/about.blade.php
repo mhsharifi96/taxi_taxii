@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 style="text-align: center; padding-top: 30px;"><?php echo $title; ?></h1>
+    <h1 style="text-align: center; padding-top: 30px;">درباره‌ما</h1>
+    
 
 
     <section id="about">
@@ -22,16 +23,16 @@
                     <p class="about-text">
                         در ایستگاه sursiz معتقدیم افراد زیادی در دنیای پیرامون ما، اهداف مشترکی با دیدگاه های متفاوتی دارند.
                     <p class="about-text">
-                        اگر می خواهید در زندگی خود موفق شوید بهتر است با گرفتن یک تاکسی  ذهنی sursiz در این راه طولانی از تجربیات سایر مسافران این مسیر بهره ببرید.
+                        اگر می خواهید در زندگی خود موفق شوید بهتر است با گرفتن یک تاکسی  ذهنی sursiz در این راه طولانی ،از تجربیات سایر مسافران این مسیر بهره ببرید.
                     </p>
                     <p class="about-text">
                         sursiz  از دوکلمه ی  sur و siz تشکیل شده است
-                        sur  به معنی اسب و درلغت نامه به معنای اسب رانده شده و  siz به معنای تندرو می باشد.
+                        sur  به معنی اسب و  siz به معنای تندرو می باشد.
                     </p>
                 </div>
 
                 <div class="col-md-6" style="margin-bottom: 20px" >
-                    <img style="width: 100%; height: 50%" src="storage/cover_images/67761_1556795721.jpg" alt="">
+                    <img style="width: 100%; height: 50%;border-radius: 10px;" src="{{url('/image/mind.jpg')}}" alt="">
                 </div>
 
 
@@ -44,7 +45,7 @@
         <div class="container wow fadeInUp">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="section-title" style="text-align: center">Our Team</h3>
+                    <h3 class="section-title" style="text-align: center">تیم‌ما</h3>
                     <div class="section-title-divider"></div>
                     <p class="section-description" style="text-align: center">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
                 </div>
@@ -54,7 +55,7 @@
                 <div class="col-md-4">
                     <div class="member">
                         <div class="pic" style="text-align: center"><img src="storage/cover_images/67761_1556795721.jpg" alt=""></div>
-                        <h4 style="text-align: center">Walter White</h4>
+                        <h4 style="text-align: center">بدرالدین بهشتی</h4>
                         <span>Chief Executive Officer</span>
                         <div class="social" style="text-align: center">
                             <a href=""><i class="fa fa-twitter"></i></a>
@@ -69,7 +70,7 @@
                     <div class="col-md-4">
                         <div class="member">
                             <div class="pic" style="text-align: center"><img src="storage/cover_images/67761_1556795721.jpg" alt=""></div>
-                            <h4 style="text-align: center">Walter White</h4>
+                            <h4 style="text-align: center">محمدحسین شریفی</h4>
                             <span>Chief Executive Officer</span>
                             <div class="social" style="text-align: center">
                                 <a href=""><i class="fa fa-twitter"></i></a>
@@ -84,7 +85,7 @@
                 <div class="col-md-4">
                     <div class="member">
                         <div class="pic" style="text-align: center"><img src="storage/cover_images/67761_1556795721.jpg" alt=""></div>
-                        <h4 style="text-align: center">William Anderson</h4>
+                        <h4 style="text-align: center">اسماعیل بخشی</h4>
                         <span>CTO</span>
                         <div class="social" style="text-align: center">
                             <a href=""><i class="fa fa-twitter"></i></a>

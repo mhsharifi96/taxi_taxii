@@ -81,7 +81,7 @@
                     </div>
                     <!-- End Footer info -->
                     <div class="footer-awarad">
-                        <img src="images/icon/best.png" alt="">
+                        {{-- <img src="images/icon/best.png" alt=""> --}}
                         <p>MAKE YOUR WAY FASTER</p>
                     </div>
                 </div>

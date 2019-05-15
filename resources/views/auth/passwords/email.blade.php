@@ -3,9 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-2 col-about"></div>
+        <div class="col-md-8" style="min-height:50vh;">
             <div class="panel panel-default">
-                <div class="panel-heading">Reset Password</div>
+                <div class="panel-heading" style="padding-top: 10%;">
+                    <h1>
+                            فراموشی رمز عبور
+                    </h1>
+                   </div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -17,10 +22,10 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="email" class="col-md-4 control-label"> ایمیل</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required placeholder="ایمیل">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -41,6 +46,7 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-2 col-about"></div>
     </div>
 </div>
 @endsection
