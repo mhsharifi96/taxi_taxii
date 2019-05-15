@@ -10,9 +10,9 @@
         <div class="container text-center text-location">
             <h1 class="header-title">اولین تاکسی ذهنی در ایران</h1>
             <h4 class="index-text">در مسیر زندگی همیشه یک خط ویژه وجود دارد البته اگر مجوز داشته باشی! <span>مثل یک تاکسی</span></h4>
-            <h5 class="index-text">
+            {{-- <h5 class="index-text">
                 همین الان مسیرخودتو عوض کن
-            </h5>
+            </h5> --}}
             @if (Auth::guest())
             <p><a class="btn btn-primary btn-lg" href="/login" role="button">ورود</a> <a class="btn btn-success btn-lg" href="/register" role="button">ثبت نام</a></p>
         

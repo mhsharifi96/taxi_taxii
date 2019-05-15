@@ -657,9 +657,15 @@ div.card .card-header-danger {
   padding-left: 15px; */
 }
 
+.th-size { 
+  text-align: center;
+}
+.td-conf { 
+  text-align: center;
+}
 
 /* responsive media for dashboard page */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 539px) {
   .col-show  {
     display: none;
   }
@@ -668,8 +674,15 @@ div.card .card-header-danger {
     font-size:9px;
   }
 
+<<<<<<< HEAD
 }
 #team .member {
   text-align: center;
   margin-bottom: 20px;
+=======
+  .form-control-search { 
+    width:70% !important;
+  }
+
+>>>>>>> 26b516af4e05199e26d99cc6f0562ac4b668d571
 }

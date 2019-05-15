@@ -94,11 +94,11 @@
                                            </label>
                                        </div>
                                     </td>   --}}
-                                    <td><small>{!!str_limit($post->title,12)!!}</small></td>
-                                    <td class="col-show"><small>{{$post->user->name}}</small></td>
-                                    <td><small>{{$post->category->name}}</small></td>
+                                    <td class="td-conf"><small>{!!str_limit($post->title,12)!!}</small></td>
+                                    <td class="col-show td-conf"><small>{{$post->user->name}}</small></td>
+                                    <td class="td-conf"><small>{{$post->category->name}}</small></td>
                                     {{--<td><small>Admin</small></td>--}}
-                                    <td class="col-show"><small>
+                                    <td class="col-show td-conf"><small>
                                                 <?php
                                                      $count=0;
                                                     foreach ($results as $result){
@@ -114,8 +114,8 @@
                                                 {{--{{count($results)}}--}}
                                                 {{--@endforeach--}}
                                                 </small></td>
-                                    <td><small>{{$post->created_at}}</small></td>
-                                     <td><small>
+                                    <td class="td-conf"><small>{{$post->created_at}}</small></td>
+                                     <td class="td-conf"><small>
                                                  <?php
                                                  if($post->available=='1'){
                                                      print ('تایید');
@@ -128,7 +128,7 @@
                                                  }
                                                  ?>
                                              </small></td>
-                                    <td>
+                                    <td class="td-conf">
                                         <a href="/posts/{{$post->id}}/edit"><i class="fa fa-pencil-square-o"></i></a>
                                         <a href="/posts/{{$post->id}}"><i style="color: #007bff" class="fa fa-eye"></i></a>
 
