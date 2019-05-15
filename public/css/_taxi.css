@@ -339,11 +339,6 @@ p {
   .dk-footer-form button:hover {
     cursor: pointer; }
 
-/* ==========================
-
-    Contact
-
-=============================*/
 .contact-us {
   position: relative;
   z-index: 2;
@@ -673,4 +668,8 @@ div.card .card-header-danger {
     font-size:9px;
   }
 
+}
+#team .member {
+  text-align: center;
+  margin-bottom: 20px;
 }

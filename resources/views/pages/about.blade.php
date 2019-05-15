@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="container ">
+        <div class="container" style="height: 400px">
             <div class="row">
 
                 <div class="col-md-6 about-content">
@@ -30,8 +30,69 @@
                     </p>
                 </div>
 
-                <div class="col-lg-6" style="margin-bottom: 20px" >
+                <div class="col-md-6" style="margin-bottom: 20px" >
                     <img style="width: 100%; height: 50%" src="storage/cover_images/67761_1556795721.jpg" alt="">
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="team">
+        <div class="container wow fadeInUp">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="section-title" style="text-align: center">Our Team</h3>
+                    <div class="section-title-divider"></div>
+                    <p class="section-description" style="text-align: center">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="member">
+                        <div class="pic" style="text-align: center"><img src="storage/cover_images/67761_1556795721.jpg" alt=""></div>
+                        <h4 style="text-align: center">Walter White</h4>
+                        <span>Chief Executive Officer</span>
+                        <div class="social" style="text-align: center">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="col-md-4">
+                        <div class="member">
+                            <div class="pic" style="text-align: center"><img src="storage/cover_images/67761_1556795721.jpg" alt=""></div>
+                            <h4 style="text-align: center">Walter White</h4>
+                            <span>Chief Executive Officer</span>
+                            <div class="social" style="text-align: center">
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <div class="col-md-4">
+                    <div class="member">
+                        <div class="pic" style="text-align: center"><img src="storage/cover_images/67761_1556795721.jpg" alt=""></div>
+                        <h4 style="text-align: center">William Anderson</h4>
+                        <span>CTO</span>
+                        <div class="social" style="text-align: center">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
                 </div>
 
 
