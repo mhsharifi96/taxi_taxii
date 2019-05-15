@@ -70,14 +70,14 @@
                                            </label>
                                        </div>
                                     </th>   --}}
-                                    <th>موضوع</th>
-                                    <th>نویسنده</th>
-                                    <th>دسته بندی</th>
+                                    <th class="th-size">موضوع</th>
+                                    <th class="col-show th-size">نویسنده</th>
+                                    <th class="th-size">دسته</th>
                                     {{--<th>تگ</th>--}}
-                                    <th>تعداد کامت</th>
-                                    <th>  تاریخ ایجاد</th>
-                                    <th>وضعیت</th>
-                                    <th>ویرایش</th>
+                                    <th class="col-show th-size">تعداد کامت</th>
+                                    <th class="th-size">  تاریخ ایجاد</th>
+                                    <th class="th-size">وضعیت</th>
+                                    <th class="th-size">ویرایش</th>
 
 
                                   </tr>
@@ -95,10 +95,10 @@
                                        </div>
                                     </td>   --}}
                                     <td><small>{!!str_limit($post->title,12)!!}</small></td>
-                                    <td><small>{{$post->user->name}}</small></td>
+                                    <td class="col-show"><small>{{$post->user->name}}</small></td>
                                     <td><small>{{$post->category->name}}</small></td>
                                     {{--<td><small>Admin</small></td>--}}
-                                    <td><small>
+                                    <td class="col-show"><small>
                                                 <?php
                                                      $count=0;
                                                     foreach ($results as $result){

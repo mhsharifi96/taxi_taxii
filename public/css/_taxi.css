@@ -661,3 +661,16 @@ div.card .card-header-danger {
   /* padding-right: 15px;
   padding-left: 15px; */
 }
+
+
+/* responsive media for dashboard page */
+@media only screen and (max-width: 768px) {
+  .col-show  {
+    display: none;
+  }
+
+  .th-size{
+    font-size:9px;
+  }
+
+}
