@@ -101,7 +101,7 @@
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
                 <label class="custom-control-label" for="customCheck1">Remember password</label>
               </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">ثبت نام</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">ورود</button>
               {{-- <hr class="my-4"> --}}
               
               <div class="border-top card-body text-center">رمز عبور خود را فراموش کرده اید؟ <a href="{{ route('password.request') }}"> اره </a></div>

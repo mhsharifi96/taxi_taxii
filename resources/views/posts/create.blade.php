@@ -15,7 +15,8 @@
                 <div class="col-md-6 col-12" style="order:2">
                         <div class="form-group">
                             {{Form::label('tag', 'تگ ها')}}
-                            {{Form::text('tag', '', ['class' => 'form-control','id' =>'form-tags-3', 'placeholder' => '#تاکسی #taxii'])}}
+                            {{Form::text('tag', '', ['class' => 'form-control','id' =>'form-tags-3', 'placeholder' => 'تگ'])}}
+                           <small style="color: red;">بعد از وارد کردن هر تگ enter را بزنید.</small>
                         </div>
                     {{-- <label>Tags input with various validation:</label>
                     <input id="form-tags-3" name="tags-3" type="text" value=""> --}}
@@ -37,7 +38,7 @@
 
         <div class="col-md-6 col-12" style="order:2">
             <div class="form-group">
-                {{Form::label('account', 'آيدی شبکه اجتماعی')}}
+                {{Form::label('account', 'آيدی/ایمیل')}}
                 {{Form::text('account', '', ['class' => 'form-control','id' =>'form-tags-3', 'placeholder' => 'آیدی فضای مجازی'])}}
             </div>
 
