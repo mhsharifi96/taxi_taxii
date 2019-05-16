@@ -14,8 +14,8 @@
                 همین الان مسیرخودتو عوض کن
             </h5> --}}
             @if (Auth::guest())
-            <p><a class="btn btn-primary btn-lg" href="/login" role="button">ورود</a> <a class="btn btn-success btn-lg" href="/register" role="button">ثبت نام</a></p>
-        
+            <p><a class="btn btn-primary btn-lg" href="{{ url('login')}}" role="button">ورود</a> <a class="btn btn-success btn-lg" href="/register" role="button">ثبت نام</a></p>
+            
             @else
             <p>
                 <a class="btn btn-primary btn-lg" href="/posts/create" role="button">درخواست تاکسی ذهنی</a>

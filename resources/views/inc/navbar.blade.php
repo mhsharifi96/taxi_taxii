@@ -84,19 +84,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ">
               <li class="nav-item">
-                    <a class="navbar-brand" href="#"> 
-                            <img src="{{url('/image/logo.png')}}" alt="" style="width:20%" > 
-                          
+              <a class="navbar-brand" href="{{url('/')}}"> 
+                            <img src="{{url('/image/logo.png')}}" alt="" style="width:80%"> 
                         </a>
               </li>
+              
             <li class="nav-item  ">
               <a class="nav-link nav-link-text" href="/">خانه<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-text" href="/about">درباره ما </a>
+            <a class="nav-link nav-link-text" href="{{ url('about')}}">درباره ما </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-text" href="/posts">درخواست‌ها</a>
+                <a class="nav-link nav-link-text" href="{{ url('posts')}}">درخواست‌ها</a>
               </li>
 
             @if (Auth::guest())
@@ -137,13 +137,18 @@
             {{-- <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li> --}}
+            
+        
           </ul>
-
-
-
           <form class="form-inline my-2 my-lg-0 mr-auto" action="/search" method="get">
             <input class="form-control mr-sm-2 form-control-search  " type="text" name="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">جست‌وجو</button>
           </form>
         </div>
+          <a class="navbar-brand logo-mobile" href="{{url('/')}}"> 
+            <img src="{{url('/image/logo.png')}}" alt="" style="width:80%"> 
+        </a>
+
+
+        
       </nav>
