@@ -47,7 +47,7 @@
                 <div class="col-md-12">
                     <h3 class="section-title" style="text-align: center">تیم‌ما</h3>
                     <div class="section-title-divider"></div>
-                    <p class="section-description" style="text-align: center">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                    <p class="section-description" style="text-align: center">یک تیم فعال پشت شماست با ما در ارتباط باشید</p>
                 </div>
             </div>
 
@@ -55,8 +55,8 @@
                 <div class="col-md-4">
                     <div class="member">
                         <div class="pic" style="text-align: center"><img src="storage/cover_images/67761_1556795721.jpg" alt=""></div>
-                        <h4 style="text-align: center">بدرالدین بهشتی</h4>
-                        <span>Chief Executive Officer</span>
+                        <h4 style="text-align: center"> سیدبدرالدین بهشتی صدر</h4>
+                        <span>برنامه نویس و توسعه دهنده ی وب سایت</span>
                         <div class="social" style="text-align: center">
                             <a href=""><i class="fa fa-twitter"></i></a>
                             <a href=""><i class="fa fa-facebook"></i></a>
@@ -71,7 +71,7 @@
                         <div class="member">
                             <div class="pic" style="text-align: center"><img src="storage/cover_images/67761_1556795721.jpg" alt=""></div>
                             <h4 style="text-align: center">محمدحسین شریفی</h4>
-                            <span>Chief Executive Officer</span>
+                            <span>برنامه نویس و توسعه دهنده ی وب سایت</span>
                             <div class="social" style="text-align: center">
                                 <a href=""><i class="fa fa-twitter"></i></a>
                                 <a href=""><i class="fa fa-facebook"></i></a>
@@ -86,7 +86,7 @@
                     <div class="member">
                         <div class="pic" style="text-align: center"><img src="storage/cover_images/67761_1556795721.jpg" alt=""></div>
                         <h4 style="text-align: center">اسماعیل بخشی</h4>
-                        <span>CTO</span>
+                        <span>گرافیست و تولیدکننده محتوای شبکه های اجتماعی</span>
                         <div class="social" style="text-align: center">
                             <a href=""><i class="fa fa-twitter"></i></a>
                             <a href=""><i class="fa fa-facebook"></i></a>

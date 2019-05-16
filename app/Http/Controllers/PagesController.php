@@ -22,6 +22,9 @@ class PagesController extends Controller
 
     public function about(){
         $title = 'About Us';
+        SEOMeta::setTitle('درباره ما |sursiz ');
+        SEOMeta::setDescription('در ین صفحه می توانید درباره ی تیم ما اطلاعاتی کسب کنید');
+        SEOMeta::addKeyword(['sursiz', 'taxi', 'درباره ما','تاکسی ذهنی','تیم ما']);
         return view('pages.about')->with('title', $title);
     }
 
