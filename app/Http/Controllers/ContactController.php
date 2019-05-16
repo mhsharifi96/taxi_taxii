@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use SEOMeta;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -24,6 +25,9 @@ class ContactController extends Controller
      */
     public function create()
     {
+        SEOMeta::setTitle('ارتباط با ما |sursiz ');
+        SEOMeta::setDescription('  در این صفحه می توانید با ما در ارتباط باشید.');
+        SEOMeta::addKeyword(['sursiz', 'taxi', 'ارتباط با ما','تاکسی ذهنی','تیم ما']);
 
         return view('contact');
     }
