@@ -104,7 +104,7 @@
 
             </div>
     @else
-        <p>No posts found</p>
+        <div style="min-height: 50vh">پستی یافت نشد</div>
     @endif
 </div>
 @endsection
