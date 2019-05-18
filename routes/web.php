@@ -37,7 +37,7 @@ Route::get('/sitemap', function () {
 });
 Route::get('/about', 'PagesController@about');
 //Route::get('/about', 'PagesController@about');
-Route::get('/services', 'PagesController@services');
+Route::get('/services' , 'PagesController@services');
 
 Route::resource('posts', 'PostsController');
 Route::resource('categories','CategoryController');

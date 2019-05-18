@@ -120,7 +120,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   {{-- <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="#">Another action</a> --}}
-                  <a class="dropdown-item" style="text-align:right" href="/dashboard">داشبورد</a>
+                  <a class="dropdown-item" style="text-align:right" href="/dashboard">پروفایل کاربری</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" style="text-align:right" href="{{ route('logout') }}"
                             onclick="event.preventDefault();

@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-4">
-                    <div class="dk-footer-box-info">
+                    <div class="dk-footer-box-info" style="text-align: center">
                         <a href="index.html" class="footer-logo">
                             {{-- <img src="images/footer_logo.png" alt="footer_logo" class="img-fluid"> --}}
                             <img src="{{url('/image/logo.png')}}" alt="footer_logo" class="img-fluid">
@@ -40,15 +40,15 @@
                         {{-- <p class="footer-info-text">
                            Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
                         </p> --}}
-                        <p class="footer-info-text">
+                        <p class="footer-info-text" style="text-align: center">
                             هم فکر و هم مسیرتو پیدا کن
                         </p>
-                        <p class="footer-info-text">
+                        <p class="footer-info-text" style="text-align: center">
                             مسیر موفقیت رو کوتاه کن
 
                         </p>
                         <div class="footer-social-link">
-                            <h3>ما را دنبال کنید</h3>
+                            <h3 style="text-align: center">ما را دنبال کنید</h3>
                             <ul>
                                 <li>
                                     <a href="http://www.facebook.com/taxi.taxii.11">
@@ -130,31 +130,21 @@
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="#">درباره ما</a>
+                                        <a href="/about">درباره ما</a>
                                     </li>
+
                                     <li>
-                                        <a href="#">Services</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Projects</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">درباره تیم</a>
+                                        <a href="/about">درباره تیم</a>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <a href="#">تماس باما</a>
+                                        <a href="/contact/create">تماس باما</a>
                                     </li>
                                     <li>
                                         <a href="#">بلاگ</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Testimonials</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Faq</a>
-                                    </li>
+
                                 </ul>
                             </div>
                             <!-- End Footer Widget -->
@@ -167,10 +157,7 @@
                                     <span class="animate-border border-black"></span>
                                 </div>
                                 <p style="color:#ffff">
-                                شاید تاکسی ذهنی شما،یک نفر را به مقصد رساند.
-                                <span>
-                                    مشترک شوید
-                                </span>
+                             ایمیلتان را وارد کنید تا از درخواست ها مطلع شوید.
                                 </p>
                             {{--{!! Form::open(['action' => 'FooterController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}--}}
                                 {{--<div class="col-md-6 col-12">--}}
@@ -215,28 +202,13 @@
         <div class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12" style="text-align: center">
                         <span>Copyright © 2019, All Right surena-project</span>
+                        <br>
+                        <span>سایت به شدت در حال توسعه است</span>
                     </div>
                     <!-- End Col -->
-                    <div class="col-md-6">
-                        <div class="copyright-menu">
-                            <ul>
-                                <li>
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#">Terms</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+
                     <!-- End col -->
                 </div>
                 <!-- End Row -->
