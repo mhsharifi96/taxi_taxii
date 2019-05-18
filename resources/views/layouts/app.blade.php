@@ -23,6 +23,17 @@
     {{--{!! SEOMeta::generate() !!}--}}
     {!! Twitter::generate() !!}
     {!! SEO::generate('true') !!}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140386684-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140386684-1');
+    </script>
+
     
 </head>
 <body >
