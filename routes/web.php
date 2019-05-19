@@ -1,5 +1,8 @@
 <?php
-
+use Spatie\Sitemap\SitemapGenerator;
+use Carbon\Carbon;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +26,15 @@ Route::get('/users/{id}/{name}', function($id, $name){
 */
 
 Route::get('/', 'PagesController@index');
+Route::get('/sitemap', function () {
+    // SitemapGenerator::create('https://sursiz.ir/')->writeToFile('sitemap.xml');
+    SitemapGenerator::create('https://sursiz.ir')
+   ->getSitemap()
+
+    ->writeToFile('sitemap.xml');
+    return ('sucess, created sitemap :)');
+
+});
 Route::get('/about', 'PagesController@about');
 //Route::get('/about', 'PagesController@about');
 Route::get('/services' , 'PagesController@services');
@@ -36,3 +48,5 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/search','PostsController@search');
+
+// Add sitemap route

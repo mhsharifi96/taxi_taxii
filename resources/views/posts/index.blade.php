@@ -50,11 +50,6 @@
 
 
 
-
-
-
-
-
                                 <div class="card-block">
                                     <a href="/posts/{{$post->id}}">
                                         <h4 class="card-title" style="text-align:center">{{$post->title}}</h4>

@@ -10,6 +10,7 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
+        "spatie/laravel-sitemap": "2.4",
         "unisharp/laravel-ckeditor": "^4.6"
     },
     "require-dev": {
