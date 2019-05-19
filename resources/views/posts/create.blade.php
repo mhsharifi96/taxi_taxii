@@ -68,12 +68,12 @@
             {{Form::label('body', 'توضیحات')}}
             {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'تاکسی تاکسی اولین تاکسی ذهنی در ایران'])}}
         </div>
-        <div class="col-md-6 col-12">
+        {{-- <div class="col-md-6 col-12">
             <div class="form-group">
                 <lable  class="control-label bold-class">عکس</lable>
                 {{Form::file('cover_image')}}
             </div>
-        </div>
+        </div> --}}
         <div>
                 {{Form::submit('ارسال', ['class'=>'btn btn-primary'])}}
         </div>

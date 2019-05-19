@@ -57,12 +57,12 @@
             {{Form::textarea('body', $post->body, ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
         </div>
         <div class="row">
-                <div class="col-md-6 col-12">
+                {{-- <div class="col-md-6 col-12">
                     <div class="form-group">
                             <lable  class="control-label bold-class">عکس</lable>  
                         {{Form::file('cover_image')}}
                     </div>
-                </div>
+                </div> --}}
             <div class="col-md-6">
                     {{Form::hidden('_method','PUT')}}
                     {{Form::submit('ذخیره', ['class'=>'btn btn-primary'])}}
