@@ -5,17 +5,16 @@
     
 
 
-    <section id="about">
-        <div class="container wow fadeInUp">
+    <div>
+        <div class="container ">
             <div class="row">
                 <div class="col-md-12">
-
                     <div class="section-title-divider"></div>
                     <p class="section-description" style="text-align: center; font-weight: bold" >اولین تاکسی ذهنی در ایران</p>
                 </div>
             </div>
         </div>
-        <div class="container" style="height: 400px">
+        <div class="container" style="height: 300px">
             <div class="row">
 
                 <div class="col-md-6 about-content">
@@ -38,11 +37,9 @@
 
             </div>
         </div>
-    </section>
-
-
-    <section id="team">
-        <div class="container wow fadeInUp">
+    </div>
+    <div id="team" style="margin-top: 300px">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="section-title" style="text-align: center">تیم‌ما</h3>
@@ -99,7 +96,7 @@
 
             </div>
         </div>
-    </section>
+    </div>
 
 
 

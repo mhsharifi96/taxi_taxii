@@ -18,6 +18,16 @@
             {{--</div>--}}
         {{--</div>--}}
     {{--</div> --}}
+    <?php
+        $pic=array('tamam.png','noimage.jpg',);
+        shuffle($pic);
+    ?>
+
+
+
+
+
+
     @if(count($posts) > 0)
 
             {{-- <section class="blog-area section"> --}}
@@ -29,7 +39,21 @@
                         <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mb-4 d-flex">
                             <div class="card flex-fill shadow">
                                 {{-- <img class="card-img-top" src="https://picsum.photos/200/150/?random"> --}}
-                                <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
+                                {{--<img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">--}}
+                               <?php
+                                $i=rand(0,count($pic)-1);
+                                ?>
+
+                                    <img style="width:100%; height:50%" src="{{url('image/'.$pic[$i].' ')}}">
+                                    {{--<img style="width:100%" src="/image/$pic[$i]">--}}
+
+
+
+
+
+
+
+
 
                                 <div class="card-block">
                                     <a href="/posts/{{$post->id}}">

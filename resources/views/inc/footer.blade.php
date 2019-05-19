@@ -89,14 +89,14 @@
                 <div class="col-md-12 col-lg-8">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="contact-us">
+                            <div class="contact-us" >
                                 <div class="contact-icon">
                                     <i class="fa fa-map-o" aria-hidden="true"></i>
                                 </div>
                                 <!-- End contact Icon -->
                                 <div class="contact-info">
                                     
-                                    <h3>کاشان</h3>
+                                    <h3 >کاشان</h3>
                                     <p>بلوار مادر</p>
                                 </div>
                                 <!-- End Contact Info -->
