@@ -19,7 +19,7 @@
         {{--</div>--}}
     {{--</div> --}}
     <?php
-        $pic=array('tamam.png','noimage.jpg',);
+        $pic=array('500-1.png','500-2.png','500-3.png','500-4.png','500-5.png','500-6.png','500-7.png');
         shuffle($pic);
     ?>
 
@@ -36,15 +36,15 @@
                     <div class="row">
                         @foreach($posts as $post)
 
-                        <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mb-4 d-flex">
-                            <div class="card flex-fill shadow">
+                        <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mb-4 ">
+                            <div class="card  shadow">
                                 {{-- <img class="card-img-top" src="https://picsum.photos/200/150/?random"> --}}
                                 {{--<img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">--}}
                                <?php
                                 $i=rand(0,count($pic)-1);
                                 ?>
 
-                                    <img style="width:100%; height:50%" src="{{url('image/'.$pic[$i].' ')}}">
+                                    <img style="width:100%;" src="{{url('image/'.$pic[$i].' ')}}">
                                     {{--<img style="width:100%" src="/image/$pic[$i]">--}}
 
 
