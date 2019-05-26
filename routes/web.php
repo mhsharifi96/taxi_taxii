@@ -14,16 +14,22 @@ use Spatie\Sitemap\Tags\Url;
 |
 */
 
-/*
-Route::get('/hello', function () {
-    //return view('welcome');
-    return '<h1>Hello World</h1>';
+
+Route::get('/', function () {
+    //event(new \App\Events\UserActivation(App\User::find(1)));
+    return 'done';
 });
 
-Route::get('/users/{id}/{name}', function($id, $name){
-    return 'This is user '.$name.' with an id of '.$id;
-});
-*/
+
+Route::get('/user/active/email/{token}','PagesController@activation' )->name('activation.account');
+
+
+
+
+//Route::get('/users/{id}/{name}', function($id, $name){
+//    return 'This is user '.$name.' with an id of '.$id;
+//});
+
 
 Route::get('/', 'PagesController@index');
 Route::get('/sitemap', function () {

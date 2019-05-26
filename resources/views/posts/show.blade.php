@@ -12,8 +12,8 @@
             <div class="col-md-4">
                     {{-- <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}"> --}}
                     <div class="col-md-12">
-                        {{-- <img class="card-img-top" src="https://picsum.photos/200/150/?random"> --}}
-                        <img style="width:100%" class="card-img-top" src="/storage/cover_images/{{$post->cover_image}}">
+
+                        <img style="width:100%" class="card-img-top" src="{{url('image/noimage.jpg ')}}">
                     </div>
                 @if(!$post->account  ==null)
                     <div class="col-md-12">
