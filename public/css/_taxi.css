@@ -609,7 +609,7 @@ div.card .card-header-danger {
   padding-right: 10px;
   width: 65px;
 }
-.comment-box .media-body p {
+.comment-box .media-body .comment-border {
   border: 1px solid #ddd;
   padding: 10px;
 }
@@ -711,3 +711,4 @@ div.card .card-header-danger {
   box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 
 }
+

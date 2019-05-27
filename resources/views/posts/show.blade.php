@@ -162,7 +162,7 @@
                                                 <div class="media-body">
                                                     {{-- <h4 class="">{{$comment->title}}</h4> --}}
                                                     <h4 class="media-heading">{{$comment->user->name}}</h4>
-                                                    <h5>{!! $comment->body!!}</h5>
+                                                    <div class="comment-border">{!! $comment->body!!}</div>
                                                     {{-- <p>sdfsdf</p> --}}
                                                   
                                                 </div>
