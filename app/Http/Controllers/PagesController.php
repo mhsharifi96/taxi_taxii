@@ -40,33 +40,50 @@ class PagesController extends Controller
 
 
     public function activation($token){
+//        $activationCode=ActivationCode::whereCode($token)->first();
+//        if(! $activationCode){
+//            dd('not exist');
+//            return redirect('/');
+//        }
+//        if($activationCode->expire<Carbon::now()){
+//            dd('expire');
+//            return redirect('/');
+//
+//        }
+//        if($activationCode->used ==true){
+//            dd('used');
+//            return redirect('/');
+//
+//        }
+//
+//        $activationCode->user()->update([
+//            'active'=>1
+//        ]);
+//
+//        $activationCode->update([
+//            'used'=>true
+//        ]);
+//
+//        auth()->loginUsingId($activationCode->user->id);
+//        return redirect('/');
+//
+//
         $activationCode=ActivationCode::whereCode($token)->first();
-        if(! $activationCode){
-            dd('not exist');
-            return redirect('/');
+        if(isset($activationCode) ){
+            $user = $activationCode->user;
+            if(!$user->active) {
+                $activationCode->user->active = 1;
+                $activationCode->user->save();
+                $status = "کدفعال سازی تایید شد و هم اکنون لاگین شوید.";
+            }else{
+                $status = "کدفعال سازی را قبلا تایید کرده اید هم اکنون لاگین شوید .";
+            }
+
+        }else{
+            return redirect('/login')->with('warning', "Sorry your email cannot be identified.");
         }
-        if($activationCode->expire<Carbon::now()){
-            dd('expire');
-            return redirect('/');
 
-        }
-        if($activationCode->used ==true){
-            dd('used');
-            return redirect('/');
-
-        }
-        $activationCode->update([
-            'used'=>true
-        ]);
-        $activationCode->user()->update([
-            'active'=>1
-        ]);
-
-        auth()->loginUsingId($activationCode->user->id);
-        return redirect('/');
-
-
-
+        return redirect('/login')->with('status', $status);
 
 
     }

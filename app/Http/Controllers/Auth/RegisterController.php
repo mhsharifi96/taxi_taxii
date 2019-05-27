@@ -91,4 +91,5 @@ class RegisterController extends Controller
             ?: redirect($this->redirectPath());
     }
 
+
 }

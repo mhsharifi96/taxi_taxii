@@ -3,6 +3,16 @@
 @section('content')
 <div class="container">
     {{-- <a href="/posts" class="btn btn-default">بازگشت</a> --}}
+    <?php
+    $pic=array('500-1.png','500-2.png','500-3.png','500-4.png','500-5.png','500-6.png','500-7.png');
+    shuffle($pic);
+    ?>
+
+    <?php
+    $i=rand(0,count($pic)-1);
+    ?>
+
+
     <h1>{{$post->title}}</h1>
     <div class="col-md-12">
         <div class="row">
@@ -13,7 +23,8 @@
                     {{-- <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}"> --}}
                     <div class="col-md-12">
 
-                        <img style="width:100%" class="card-img-top" src="{{url('image/noimage.jpg ')}}">
+                        {{--<img style="width:100%" class="card-img-top" src="{{url('image/noimage.jpg ')}}">--}}
+                        <img style="width:100%;" src="{{url('image/'.$pic[$i].' ')}}">
                     </div>
                 @if(!$post->account  ==null)
                     <div class="col-md-12">
