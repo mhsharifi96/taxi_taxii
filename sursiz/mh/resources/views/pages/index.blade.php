@@ -372,15 +372,16 @@
                 <div class="item news-item">
                     <div class="inner-item">
                         <img alt="" src="{{$blog->image}}">
-                        <div class="hover-item">
-                            <ul>
-                                <li><a class="autor" href="#"><i class="fa fa-user"></i>{{$blog->day}}:{{$blog->created_at}}</a></li>
-                              </ul>
-                        </div>
+                        {{--<div class="hover-item">--}}
+                            {{--<ul>--}}
+                                {{--<li><a class="autor" href="#">{{$blog->title}}</a></li>--}}
+                              {{--</ul>--}}
+                        {{--</div>--}}
                     </div>
-                    <h4><a href="blog/{{$blog->id}}">{{$blog->title}}</a></h4>
-                    <p>{!!str_limit($blog->body,45)!!}</p>
-                    <a class="read-more" href="single-post.html"><i class="fa fa-arrow-left"></i>اطلاعات بیشتر</a>
+
+                    <p><a href="blog/{{$blog->id}}">{{$blog->title}}</a></p>
+                    <p>{!!str_limit($blog->body,45)!!}<a href="blog/{{$blog->id}}">ادامه مطلب</a></p>
+
                 </div>
                     @endforeach
 

@@ -27,8 +27,11 @@
                     </div>
                     <div class="col-md-8">
                         <h1 class="panel-title mgb-15">{{$blog->title}}</h1>
-                        <p >
-                            <span class="font-farsi"><i class="fa fa-calendar"></i> {{$blog->day}}:{{$blog->created_at}}</span>
+                        <?php
+                        $temp = explode(' ',$blog->created_at);
+                        ?>
+                        <p>
+                            <span class="font-farsi"> {{ $temp[0]}} <i class="fa fa-calendar"></i></span>
                         </p>
                         <div class="parent-p">
                             <p>

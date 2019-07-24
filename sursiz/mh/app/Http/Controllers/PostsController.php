@@ -43,7 +43,7 @@ class PostsController extends Controller
         $category=Category::all();
 
 
-            $posts = Post::latest()->orderBy('created_at','desc')->where('available','=',1)->paginate(6);
+            $posts = Post::latest()->orderBy('created_at','desc')->where('available','=',1)->paginate(18);
         return view('posts.index',compact('category'))->with('posts', $posts);
 
     }

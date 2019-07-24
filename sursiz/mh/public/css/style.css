@@ -1008,7 +1008,7 @@ body {
 }
 
 a.read-more {
-    display: inline-block;
+    display: flow-root;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -1025,6 +1025,7 @@ a.read-more {
     -o-transition: all 0.17s ease-in-out;
     text-transform: lowercase;
     text-decoration: none;
+    text-align: center;
 }
 
 a.read-more i {
@@ -4005,7 +4006,7 @@ element {
 .panel-title {
 
     line-height: 1.7;
-    color: #7c0dca;
+    /*color: #7c0dca;*/
     margin: 3px;
     margin-bottom: 3px;
 
