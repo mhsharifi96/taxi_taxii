@@ -151,10 +151,10 @@
                      <div class="col-md-4">
                         <div id="carbonads">
                             <span>
-                                <div class="col-md-5">
+                                <div class="col-md-6" style="text-align: center">
                                     <img src="../{{$p->image}}" alt="" width="130" height="100" style="border-radius: 10px">
                                 </div>
-                                <div class="col-md-">
+                                <div class="col-md-6">
                                     <a href="/posts/{{$p->id}}">
                                     <h4 class="card-title" style="text-align:center">{{$p->title}}</h4>
                                     </a>

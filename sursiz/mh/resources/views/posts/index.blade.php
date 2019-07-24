@@ -246,8 +246,8 @@
     </div>
 
     <div class="portfolio-box with-4-col">
-        <div class="container">
-            <ul class="filter">
+        <div class="container " >
+            <ul class="filter ">
                 @foreach($category as $c)
                 <li><a href="#" data-filter=".{{$c->name}}">{{$c->name}}</a></li>
                 {{--<li><a href="#" data-filter=".طراحی">طراحی</a></li>--}}
@@ -256,44 +256,19 @@
                 <li><a href="#" class="active" data-filter="*"><i class="fa fa-th"></i>نمایش همه</a></li>
             </ul>
 
-            <?php
-            $pic=array('500-1.png','500-2.png','500-3.png','500-4.png','500-5.png','500-6.png','500-7.png');
-            shuffle($pic);
-            ?>
+
 
 
             @if(count($posts) > 0)
-            <div class="portfolio-container">
-                @foreach($posts as $post)
-                {{--<div class="work-post {{$post->category->name}}">--}}
-                    {{--<div class="work-post-gal">--}}
-                        <?php
-                        $i=rand(0,count($pic)-1);
-                        ?>
-                            {{--{{url('image/'.$pic[$i].' ')}}--}}
-                        {{--<img alt="" src="{{$post->image}}">--}}
-                        {{--<div class="hover-box">--}}
-                            {{--<a class="zoom video" href="http://www.youtube.com/watch?v=XSGBVzeBUbk"></a>--}}
-                            {{--<a class="page" href="single-project.html"></a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="work-post-content">--}}
-                        {{--<a href="/posts/{{$post->id}}">--}}
-                            {{--<h4 class="card-title" style="text-align:center">{{$post->title}}</h4>--}}
-                        {{--</a>--}}
-                        {{--<h>{{$post->category->name}}</h>--}}
-                        {{--<h3 style="    margin-bottom: 4rem;">--}}
-                            {{--{!!str_limit($post->body,35)!!}--}}
-                        {{--</h3>--}}
 
-                        {{--<small style="float:left">{{$post->user->name}}</small>--}}
-                        {{--<a href="/posts/{{$post->id}}">--}}
-                            {{--<button class="btn btn-info float-right btn-sm">مشاهده</button>--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
+            <div class="row">
+                <div class="portfolio-container ">
+                @foreach($posts as $post)
+
+
 
                     <div class="col-md-4  {{$post->category->name}}">
-                        <div id="carbonads">
+                        <div id="carbonads" style="width: 100%">
                                 <span>
                                     <div class="col-md-6" style="text-align: center;">
                                         <img src="{{$post->image}}" alt="" width="130" height="100" style="border-radius: 10px" >
@@ -314,6 +289,8 @@
                     </div>
 
 
+
+
                 @endforeach
                     <div class="col-md-12">
 
@@ -325,6 +302,7 @@
                     </div>
 
             </div>
+                </div>
             @else
                 <div style="min-height: 50vh">پستی یافت نشد</div>
             @endif

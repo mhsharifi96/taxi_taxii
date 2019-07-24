@@ -862,7 +862,7 @@ pre code {
 .col-xs-9,
 .col-xs-10,
 .col-xs-11 {
-  float: left;
+  float:right;
 }
 
 .col-xs-1 {
@@ -1082,7 +1082,7 @@ pre code {
   .col-md-9,
   .col-md-10,
   .col-md-11 {
-    float: left;
+    float: right;
   }
   .col-md-1 {
     width: 8.333333333333332%;

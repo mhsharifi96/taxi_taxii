@@ -18,36 +18,36 @@
 
 <div class="row">
     <div class="col-md-1"></div>
-        <div class=" col-md-10 well-blog">
-            <div class="row">
-            <div class=" col-md-12 ">
-                <div class="col-md-3 pull-right show-place " style="text-align: center">
-                    <img src="../{{$blog->image}}"  class="img-responsive img-thumbnail">
-
-                    <div class="col-xs-12" style="padding-top:20px ">
-                        <span>برچسب ها: </span>
-                        <span class="tag">
-                                    <a href="/course/tag/آیلتس" title="ییی" class="label label-default" target="_blank">{{$blog->tag}}</a>
-                                </span>
+        <div class=" col-md-10 ">
+            <div class="row well-blog pull-right show-place" >
+                    <div class="col-md-4  " style="text-align: center">
+                        <img src="../{{$blog->image}}"  class="img-responsive img-thumbnail">
 
 
                     </div>
-                </div>
-                <div class="col-md-9">
-                    <h1 class="panel-title mgb-15">{{$blog->title}}</h1>
-                    <p >
-                        <span class="font-farsi"><i class="fa fa-calendar"></i> {{$blog->day}}:{{$blog->created_at}}</span>
-                    </p>
-                    <div class="parent-p">
-                        <p>
-                            {{$blog->body}}
+                    <div class="col-md-8">
+                        <h1 class="panel-title mgb-15">{{$blog->title}}</h1>
+                        <p >
+                            <span class="font-farsi"><i class="fa fa-calendar"></i> {{$blog->day}}:{{$blog->created_at}}</span>
                         </p>
+                        <div class="parent-p">
+                            <p>
+                                {{$blog->body}}
+                            </p>
 
+                        </div>
+                        <div style="padding-top:20px ">
+                            <span>برچسب ها: </span>
+                            <span class="tag">
+                                        <a href="/course/tag/آیلتس" title="ییی" class="label label-default" target="_blank">{{$blog->tag}}</a>
+                                    </span>
+
+
+                        </div>
                     </div>
-                </div>
 
 
-            </div>
+
             </div>
 
 

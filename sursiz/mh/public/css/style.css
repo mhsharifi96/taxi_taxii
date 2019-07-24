@@ -2,17 +2,17 @@
 /*-------------------------------------------------
  =  Table of Css
 
- 1.Isotope                              
- 2.Header                          
- 3.General code                   
- 4.content - home sections                              
- 5.Portfolio pages                           
- 6.Blog pages       
- 8.Contact page                               
- 9.Single post                            
- 10.About page                            
- 11.Shop Page           
- 12.Single Project page         
+ 1.Isotope
+ 2.Header
+ 3.General code
+ 4.content - home sections
+ 5.Portfolio pages
+ 6.Blog pages
+ 8.Contact page
+ 9.Single post
+ 10.About page
+ 11.Shop Page
+ 12.Single Project page
  13.Footer
  14.nouislider style (used in priccing range)
  15.Single page
@@ -87,7 +87,7 @@ header.active .top-line {
 
 .top-line p {
     float: right;
-    margin: 0; 
+    margin: 0;
 }
 
 .top-line p span {
@@ -97,7 +97,7 @@ header.active .top-line {
     font-family: 'WYekan', sans-serif;
     border-left: 1px solid #dddddd;
     line-height: 16px;
-    margin-right: 13px;  
+    margin-right: 13px;
 
 }
 
@@ -341,7 +341,7 @@ h1 {
     font-size: 38px;
     font-family: 'WYekan', sans-serif;
     font-weight: 300;
-    margin: 0;    
+    margin: 0;
 }
 
 h2 {
@@ -350,7 +350,7 @@ h2 {
     font-family: 'WYekan', sans-serif;
     font-weight: 600;
     margin: 0;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -1451,7 +1451,7 @@ ul.device-list li.device4 {
 .stars-list {
     padding-bottom: 15px;
     border-bottom: 1px solid #dedede;
-    margin-bottom: 30px;    
+    margin-bottom: 30px;
 }
 
 .stars-list li a i {
@@ -1644,12 +1644,12 @@ ul.product-list li a:hover i {
 
 .accordion-box {
     margin-bottom: 20px;
-      
+
 }
 
 .accord-elem {
     margin-bottom: 20px;
-    
+
 }
 
 .accord-title {
@@ -1661,7 +1661,7 @@ ul.product-list li a:hover i {
 
 .accord-title h5 {
     padding-right: 48px;
-     
+
 }
 
 .accord-title h5 i {
@@ -1669,7 +1669,7 @@ ul.product-list li a:hover i {
     font-size: 20px;
     vertical-align: middle;
     margin-right: 12px;
-   
+
 }
 
 a.accord-link {
@@ -1734,15 +1734,15 @@ a.accord-link.opened {
 .tab-content-box {
     text-align: center;
     padding: 60px;
-    border: 1px solid #dbdbdb;    
+    border: 1px solid #dbdbdb;
 }
 
 .tab-box {
     text-align: center;
     padding: 65px 0 83px;
     border: 1px solid #dbdbdb;
-    min-height: 365px; 
-    direction: rtl;    
+    min-height: 365px;
+    direction: rtl;
 }
 
 .tab-content {
@@ -1754,7 +1754,7 @@ a.accord-link.opened {
 }
 
 ul.tab-links {
-    border: 1px solid #dbdbdb; 
+    border: 1px solid #dbdbdb;
     border-top: none;
     overflow: hidden;
     margin-bottom: 40px;
@@ -1764,11 +1764,11 @@ ul.tab-links li {
     float: left;
     width: 33.33%;
     text-align: center;
-    border-left: 1px solid #dbdbdb; 
+    border-left: 1px solid #dbdbdb;
 }
 
 ul.tab-links li:first-child {
-    border-left: none; 
+    border-left: none;
 }
 
 ul.tab-links li a {
@@ -1947,16 +1947,16 @@ ul.filter li a:hover i {
 }
 
 .portfolio-container {
-    width: 1170px;
-    margin-left: -15px;
-    margin-bottom: 20px;
-    float:right;
-    text-align:right;
+    width: 100%;
+    /*margin-left: -15px;*/
+    /*margin-bottom: 20px;*/
+    /*float:right;*/
+    /*text-align:right;*/
 }
 
 .portfolio-container .work-post {
     margin: 15px;
-    
+
 }
 
 .portfolio-container .work-post .work-post-content,
@@ -1969,7 +1969,7 @@ ul.filter li a:hover i {
 }
 
 .with-4-col .portfolio-container .work-post {
-    width: 262px;
+    width: 100%;
 }
 
 .with-3-col .portfolio-container .work-post {
@@ -4005,4 +4005,22 @@ element {
 }
 .show-place-panel img {
     margin-left: 5px;
+}
+.form-footer {
+    display: block;
+    width: 82%;
+    height: 36px;
+    padding: .375rem .75rem;
+    font-size: large;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    font-family: iranyekan;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
