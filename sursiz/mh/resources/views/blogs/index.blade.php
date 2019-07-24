@@ -22,6 +22,73 @@
             <div class="container">
                 <div class="row">
 
+
+                    <div class="col-md-3 sidebar">
+                        <div class="sidebar-widgets">
+                            <div class="search-widget widget">
+                                <form>
+                                    <input type="search" placeholder="... جستجو "/>
+                                    <button type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+
+                            <div class="accordion-widget widget">
+                                <h5>سوالات</h5>
+                                <div class="accordion-box">
+
+                                    <div class="accord-elem active">
+                                        <div class="accord-title">
+                                            <h5><i class="fa fa-question"></i>سورسیز چیست</h5>
+                                            <a class="accord-link" href="#"></a>
+                                        </div>
+                                        <div class="accord-content">
+                                            <p>اولین تاکسی ذهنی در ایران</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="accord-elem">
+                                        <div class="accord-title">
+                                            <h5><i class="fa fa-question"></i>تاکسی ذهنی چیست</h5>
+                                            <a class="accord-link" href="#"></a>
+                                        </div>
+                                        <div class="accord-content">
+                                            <p>یک جمع سپاری ذهنی با رهبری شما</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="accord-elem">
+                                        <div class="accord-title">
+                                            <h5><i class="fa fa-question"></i>اهداف ما </h5>
+                                            <a class="accord-link" href="#"></a>
+                                        </div>
+                                        <div class="accord-content">
+                                            <p> اشتراک گذاری ذهن ها</p>
+                                            <p>پاسخ گویی به نیاز کاربران</p>
+                                            <p>تطابق ایده ها</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tags-widget widget">
+                                <h5>تگ ها</h5>
+                                <ul class="tag-widget-list">
+                                    <li><a href="#">طراحی سایت</a></li>
+                                    <li><a href="#">کدنویسی</a></li>
+                                    <li><a href="#">وردپرس</a></li>
+                                    <li><a href="#">سئو</a></li>
+                                    <li><a href="#">php</a></li>
+                                    <li><a href="#">فتوشاپ</a></li>
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
                     <div class="col-md-9 blog-side">
 
                             @foreach($blogs as $blog)
@@ -79,69 +146,7 @@
                     </div>
 
 
-                    <div class="col-md-3 sidebar">
-                        <div class="sidebar-widgets">
-                            <div class="search-widget widget">
-                                <form>
-                                    <input type="search" placeholder="... جستجو "/>
-                                    <button type="submit">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </form>
-                            </div>
 
-                            <div class="accordion-widget widget">
-                                <h5>سوالات</h5>
-                                <div class="accordion-box">
-
-                                    <div class="accord-elem active">
-                                        <div class="accord-title">
-                                            <h5><i class="fa fa-question"></i>سورسیز چیست؟</h5>
-                                            <a class="accord-link" href="#"></a>
-                                        </div>
-                                        <div class="accord-content">
-                                            <p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ،</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="accord-elem">
-                                        <div class="accord-title">
-                                            <h5><i class="fa fa-question"></i>اهداف ما</h5>
-                                            <a class="accord-link" href="#"></a>
-                                        </div>
-                                        <div class="accord-content">
-                                            <p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ،</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="accord-elem">
-                                        <div class="accord-title">
-                                            <h5><i class="fa fa-question"></i>خدمات ما</h5>
-                                            <a class="accord-link" href="#"></a>
-                                        </div>
-                                        <div class="accord-content">
-                                            <p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ،</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tags-widget widget">
-                                <h5>تگ ها</h5>
-                                <ul class="tag-widget-list">
-                                    <li><a href="#">طراحی سایت</a></li>
-                                    <li><a href="#">کدنویسی</a></li>
-                                    <li><a href="#">وردپرس</a></li>
-                                    <li><a href="#">سئو</a></li>
-                                    <li><a href="#">php</a></li>
-                                    <li><a href="#">فتوشاپ</a></li>
-                                </ul>
-                            </div>
-
-
-
-                        </div>
-                    </div>
                 </div>
 
             </div>

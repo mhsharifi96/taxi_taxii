@@ -123,7 +123,8 @@ header.active .top-line {
 
 
 ul.social-icons {
-    float: left;
+    /*float: left;*/
+    text-align: center;
 }
 
 ul.social-icons li {
@@ -515,7 +516,7 @@ body {
 
 .services-box {
     position: relative;
-    padding: 40px 0 10px;
+    padding: 40px 3% 3% 10px;
     direction: rtl;
 
 }
@@ -535,7 +536,7 @@ body {
 .services-post > a {
     position: relative;
     display: inline-block;
-    float: left;
+    float: right;
     width: 66px;
     height: 66px;
     background: #0076f9;
@@ -604,8 +605,9 @@ body {
 }
 
 .services-post-content {
-    margin-left: 86px;
+    margin-left: 6px;
     padding-top: 10px;
+    padding-right: 90px;
 }
 
 .services-post-content h4 {
@@ -3615,6 +3617,7 @@ div.card .card-header {
     -ms-flex-align: stretch;
     align-items: stretch;
     width: 100%;
+    padding-right: 25px;
 
 }
 .input-group-prepend {
@@ -3690,7 +3693,7 @@ div.card .card-header {
 
 }
 .input-group .form-control {
-    width: 100%;
+    width: 88%;
     margin-bottom: 0;
 
 }
