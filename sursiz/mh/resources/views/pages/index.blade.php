@@ -197,22 +197,29 @@
 
                     @foreach($posts as $p)
                         <div class="col-md-4">
-                            <div id="carbonads">
+                            <div  class="card" style="min-height:200px;" >
                             <span>
-                                <div class="col-md-6" style="text-align: center">
-                                    <img src="../{{$p->image}}" alt="" width="130" height="100" style="border-radius: 10px">
-                                </div>
-                                <div class="col-md-6">
-                                    <a href="/posts/{{$p->id}}">
-                                    <h4 class="card-title" style="text-align:center">{{$p->title}}</h4>
-                                    </a>
-                                    <h>{{$p->category->name}}</h>
-                                    <h style="float:left">{{$p->user->name}}</h>
-                                    <h3 style="margin-top: 1rem; font-size: 15px">
-                                    {!!str_limit($p->body,35)!!}
-                                    </h3>
+                                <div class="col-md-5" style="text-align: center">
+                                    <img src="../{{$p->image}}" alt="" width="130" height="130" style="border-radius: 10px; margin-top:12%;">
+                                    <a class="btn btn-success"  style=" display:block; position:relative; top: 10px;" href="/posts/{{$p->id}}" role="button">مشاهده</a>  
 
                                 </div>
+                                <div class="col-md-7 card-body">
+                                    
+                                        <a href="/posts/{{$p->id}}">
+                                        <h4 class="card-title" style="text-align:center">{!!str_limit(strip_tags($p->title),45)!!}</h4>
+                                        </a>
+                                        <h>{{$p->category->name}}</h>
+                                        <h style="float:left">{{$p->user->name}}</h>
+                                        <h3 style="margin-top: 1rem; font-size: 15px">
+                                        {!!str_limit(strip_tags($p->body),80)!!}
+                                        </h3>
+                                        
+                                        
+                                        
+                                        
+                                </div>
+                                
                             </span>
                             </div>
                         </div>
