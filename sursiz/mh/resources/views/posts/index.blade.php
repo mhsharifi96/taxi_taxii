@@ -267,31 +267,43 @@
 
 
 
-                    <div class="col-md-4  {{$post->category->name}}">
-                        <div id="carbonads" style="width: 100%">
-                                <span>
-                                    <div class="col-md-6" style="text-align: center;">
-                                        <img src="{{$post->image}}" alt="" width="130" height="100" style="border-radius: 10px" >
-                                    </div>
-                                    <div class="col-md-6">
+
+
+                    {{-- /////////////// --}}
+
+                    <div class="col-md-4 {{$post->category->name}}">
+                            <div  class="card" style="min-height:200px;" >
+                            <span>
+                                <div class="col-md-5" style="text-align: center">
+                                    <img src="../{{$post->image}}" alt="" width="130" height="130" style="border-radius: 10px; margin-top:12%;">
+                                    <a class="btn btn-success"  style=" display:block; position:relative; top: 10px;" href="/posts/{{$post->id}}" role="button">مشاهده</a>  
+
+                                </div>
+                                <div class="col-md-7 card-body">
+                                    
                                         <a href="/posts/{{$post->id}}">
-                                        <h4 class="card-title" style="text-align:center">{{$post->title}}</h4>
+                                        <h4 class="card-title" style="text-align:center">{!!str_limit(strip_tags($post->title),45)!!}</h4>
                                         </a>
                                         <h>{{$post->category->name}}</h>
                                         <h style="float:left">{{$post->user->name}}</h>
                                         <h3 style="margin-top: 1rem; font-size: 15px">
-                                        {!!str_limit($post->body,35)!!}
+                                        {!!str_limit(strip_tags($post->body),80)!!}
                                         </h3>
-
-                                    </div>
-                                </span>
+                                        
+                                        
+                                        
+                                        
+                                </div>
+                                
+                            </span>
+                            </div>
                         </div>
-                    </div>
-
-
-
+                    {{-- ///////////////// --}}
 
                 @endforeach
+
+
+
                     <div class="col-md-12">
 
                         <div  style=" margin-left: auto; margin-right: auto; text-align: center ">
