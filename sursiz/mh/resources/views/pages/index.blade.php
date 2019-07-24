@@ -155,8 +155,10 @@
 
                     <div class="col-md-4">
                         <div class="services-post">
+
                             <a class="services-icon1" href="#"><i class="fa fa-cogs"></i></a>
-                            <div class="services-post-content">
+
+                            <div class="services-post-content" >
                                 <h4>چند منظوره</h4>
                                 <p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود</p>
                             </div>
@@ -166,7 +168,7 @@
                     <div class="col-md-4">
                         <div class="services-post">
                             <a class="services-icon2" href="#"><i class="fa fa-desktop"></i></a>
-                            <div class="services-post-content">
+                            <div class="services-post-content" >
                                 <h4>طراحی انعطاف پذیر</h4>
                                 <p>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود</p>
                             </div>

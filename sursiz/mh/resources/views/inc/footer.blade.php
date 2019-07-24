@@ -235,8 +235,8 @@
 
 
                 <div class="col-md-3 footer-col-r " style="margin-bottom: 20px" >
-                    <a><img src="image/surlog.png"></a>
-                    <div class="card-img-overlay ">
+                    <a><img src="../image/surlog.png"></a>
+                    <div class="card-img-overlay " style="padding-bottom: 20px">
                         <br>
                         <h4 style="text-align: center">همفکر و هم مسیرتو پیدا کن</h4>
                         <br>
@@ -254,8 +254,7 @@
 
                             </ul>
                         </h4>
-                        <br>
-                        <h4 style="text-align: center;margin-bottom:10px ">MAKE YOUR WAY FASTER</h4>
+                        <h4 style="text-align: center">MAKE YOUR WAY FASTER</h4>
 
                     </div>
 
@@ -271,7 +270,7 @@
                     <ul class="contact-list" style="padding-right: 40px">
                         <li> 03155579059 <i class="fa fa-phone"></i> </li>
                         <li> contact@yourdomain.com <i class="fa fa-envelope"></i></li>
-                        <li>کاشان - بلوارمادر- مرکز رشد دانشگاه کاشان <i class="fa fa-home"></i> </li>
+                        <li>کاشان-بلوارمادر-مرکزرشددانشگاه کاشان <i class="fa fa-home"></i> </li>
                     </ul>
 
 
