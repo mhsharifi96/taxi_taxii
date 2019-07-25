@@ -37,7 +37,7 @@
 
                         <div class="search-widget widget" style="margin-top: 20px">
                             <form action="/search" method="get">
-                                <input  placeholder="جستجو... " type="search" name="search"  aria-label="Search">
+                                <input  placeholder=" ...جستجو " type="search" name="search"  aria-label="Search">
                                 <button type="submit">
                                     <i class="fa fa-search"></i>
                                 </button>
@@ -46,18 +46,17 @@
 
                         <div class="tags-widget widget">
                             <h5>تگ ها</h5>
-                            <ul class="tag-widget-list">
-                                <?php  $x=explode(",", $post->tag);
+                            <span class="tag">
+                                 <?php  $x=explode(",", $post->tag);
                                 ?>
 
                                 @for($i=0;$i<count($x);$i++)
-                                    <li><a href="#"><?php echo $x[$i] ?></a></li>
+                                         <a href="" title="" class="label label-default" target="_blank"><?php echo $x[$i] ?></a>
+
                                 @endfor
-                                <li><a href="#">درخواست ها</a></li>
-                                <li><a href="#">دسته ها</a></li>
-
-
-                            </ul>
+                                <a href="" title="" class="label label-default" target="_blank">درخواست ها</a>
+                                <a href="" title="" class="label label-default" target="_blank">دسته ها</a>
+                            </span>
                         </div>
 
 

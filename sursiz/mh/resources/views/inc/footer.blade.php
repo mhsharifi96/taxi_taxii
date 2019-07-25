@@ -269,7 +269,7 @@
                     <br>
                     <ul class="contact-list" style="padding-right: 40px">
                         <li> 03155579059 <i class="fa fa-phone"></i> </li>
-                        <li> <a href="mailto:info@sursiz.ir">info@sursiz.ir</a> <i class="fa fa-envelope"></i></li>
+                        <li> info@sursiz.ir <i class="fa fa-envelope"></i></li>
                         <li>کاشان-بلوارمادر-مرکزرشددانشگاه کاشان <i class="fa fa-home"></i> </li>
                     </ul>
 
