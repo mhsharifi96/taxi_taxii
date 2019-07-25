@@ -116,7 +116,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="upload/slider-revolution/321.jpg" alt="..." style="width:100%">
+                    <img src="upload/slider-revolution/321.jpg" alt="تاکسی ذهنی" style="width:100%;min-height:20em">
                     <div class="carousel-caption" style="text-align: left;margin-bottom:50px">
                         @if (Auth::guest())
                         <a  href="{{ url('login')}}" style="color: white; background-color:#1F646C; padding: 10px 10px 10px 10px; ">شروع کنید</a>
@@ -125,22 +125,14 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="upload/slider-revolution/99.jpg" alt="..." style="width:100%">
+                    <img src="upload/slider-revolution/99.jpg" alt="سورسیز" style="width:100%;min-height:20em">
                 </div>
                 <div class="item">
-                    <img src="upload/slider-revolution/82.jpg" alt="..." style="width:100%">
+                    <img src="upload/slider-revolution/82.jpg" alt="sursiz" style="width:100%;min-height:20em">
 
                 </div>
 
             </div>
-
-            <!-- Controls -->
-            {{--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">--}}
-                {{--<span class="glyphicon glyphicon-chevron-left"></span>--}}
-            {{--</a>--}}
-            {{--<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">--}}
-                {{--<span class="glyphicon glyphicon-chevron-right"></span>--}}
-            {{--</a>--}}
         </div>
     </div>
 
