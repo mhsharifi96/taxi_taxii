@@ -40,10 +40,10 @@
 
                         </div>
                         <div style="padding-top:20px ">
-                            <span>برچسب ها: </span>
+                            <span>تگ ها: </span>
                             <span class="tag">
-                                        <a href="/course/tag/آیلتس" title="ییی" class="label label-default" target="_blank">{{$blog->tag}}</a>
-                                    </span>
+                                <a href="../blog/{{$blog->id}}" title="ییی" class="label label-default" target="_blank">{{$blog->tag}}</a>
+                            </span>
 
 
                         </div>

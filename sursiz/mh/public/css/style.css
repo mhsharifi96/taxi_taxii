@@ -1008,7 +1008,7 @@ body {
 }
 
 a.read-more {
-    display: flow-root;
+    display: inline-block;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -1896,6 +1896,7 @@ ul.page-tree li a {
     -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
+    direction: rtl;
 }
 
 ul.filter {
@@ -4039,4 +4040,37 @@ element {
     border-bottom-left-radius: 0.25rem;
     font-family: iranyekan;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+ul.social-icons-nav {
+    /*float: left;*/
+    text-align: left;
+
+}
+
+ul.social-icons-nav li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+ul.social-icons-nav li a {
+    display: inline-block;
+    margin-bottom: -2px;
+    transition: all 0.17s ease-in-out;
+    -moz-transition: all 0.17s ease-in-out;
+    -webkit-transition: all 0.17s ease-in-out;
+    -o-transition: all 0.17s ease-in-out;
+}
+
+ul.social-icons-nav li a i {
+    font-size: 17px;
+    color: #0077f9;
+}
+
+ul.social-icons-nav li a:hover {
+    transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
 }
