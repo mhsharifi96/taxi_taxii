@@ -64,10 +64,10 @@
                             <h4>پست ها</h4>
                         </div>
 
-		                <div class="col-md-6">
+		                <div class="col-md-5">
 
 		                </div>
-                        <div class="col-md-3" style="text-align: center">
+                        <div class="col-md-4" style="text-align: center">
                             <a href="posts/create">
                                 <button  type="button"  class="btn btn-primary " >درخواست جدید</button>
                             </a>

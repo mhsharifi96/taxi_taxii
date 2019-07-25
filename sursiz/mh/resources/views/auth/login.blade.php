@@ -94,9 +94,8 @@
         <div class="container">
           <h2>پروژه</h2>
           <ul class="page-tree">
-            <li><a href="#">پروژه</a></li>
-            <li><a href="portfolio-2col.html">نمونه کار</a></li>
-            <li><a href="index.html">صفحه نخست</a></li>
+            <li><a href="/login">ورود</a></li>
+            <li><a href="/">صفحه نخست</a></li>
           </ul>
         </div>
       </div>

@@ -234,14 +234,8 @@
                 <li><a href="/posts">درخواست ها</a></li>
                 <li><a href="/">صفحه نخست</a></li>
             </ul>
-            <div class="search-widget widget" style="width: 300px; margin-left: 200px">
-                <form action="/search" method="get">
-                    <input  placeholder="جستجو... " type="search" name="search"  aria-label="Search">
-                    <button type="submit">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </form>
-            </div>
+
+
         </div>
     </div>
 
@@ -255,7 +249,16 @@
 
                 <li><a href="#" class="active" data-filter="*"><i class="fa fa-th"></i>نمایش همه</a></li>
             </ul>
+            
 
+            <div class="search-widget widget" style="width: 300px;">
+                <form action="/search" method="get">
+                    <input  placeholder=" ...جستجو " type="search" name="search"  aria-label="Search">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
 
 
 
