@@ -97,23 +97,19 @@
                                     <p class="card-text1" >
                                         مقصد:  {{$post->title}}
                                       </p>
-                                    <p class="card-text" style="margin-right: 150px">درخواست توسط: {{$post->user->name}} </p>
-                                    <p class="card-text" style="margin-right: 150px"> تاریخ ایجاد درخواست : {{$post->created_at}}</p>
+                                    <p class="card-text">{{$post->user->name}}   <i class="fa fa-user "></i></p>
+                                    <p class="card-text"> {{$post->created_at}}  <i class="fa fa-calendar"></i></p>
+                                    <p class="card-text">
+
                                     @if(!$post->account  ==null)
-                                        <div class="card-text" style="margin-right:150px">
-
-                                            ایدی/ایمیل مسافر:
                                             @if(!Auth::guest())
-                                                <span>
                                             {{$post->account}}
-                                        </span>
-
                                             @else
                                                 برای مشاهده ابتدا در سایت عضو شوید :/
                                             @endif
-
-                                        </div>
                                     @endif
+                                        <i class="far fa-envelope"></i>
+                                    </p>
                                 </div>
                             </div>
                             <!-- Carousel start -->
@@ -124,12 +120,12 @@
 
                     <br>
                     <div class="card_des" style="box-shadow: 5px 5px 5px grey; min-height: 30%;">
-                      <div class="row">
+                      <div class="row item news-item">
 
                           <h4 style="margin-right: 20px">
                         :      توضیحات
                           </h4>
-                          <h1 style="margin-right: 30px;">
+                          <h1 style="margin-right: 30px; min-height: 20px">
                               {!!$post->body!!}
                           </h1>
 
@@ -153,7 +149,7 @@
                         <div class="col-md-4">
                             <div  class="card" style="min-height:200px;" >
                             <span>
-                                <div class="col-md-5" style="text-align: center">
+                                <div class="col-md-5 " style="text-align: center">
                                     <img src="../{{$p->image}}" alt="" width="130" height="130" style="border-radius: 10px; margin-top:12%;">
                                     <a class="btn btn-success"  style=" display:block; position:relative; top: 10px;" href="/posts/{{$p->id}}" role="button">مشاهده</a>  
 
@@ -165,7 +161,7 @@
                                         </a>
                                         <span>{{$p->category->name}}</span>
                                         <span style="float:left">{{$p->user->name}}</span> 
-                                        <h3 style="margin-top: 1rem; font-size: 15px">
+                                        <h3 class="item news-item" style="margin-top: 1rem; font-size: 15px">
                                         {!!str_limit(strip_tags($p->body),80)!!}
                                         </h3>
                                         
