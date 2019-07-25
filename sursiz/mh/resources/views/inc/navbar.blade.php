@@ -190,43 +190,43 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-
+                        @if (Auth::guest())
+                        <li class="drop"><a href="#">ورود/ثبت نام</a>
+                            <ul class="drop-down">
+                                <li><a href="/login">ورود</a></li>
+                                <li><a href="/register">ثبت نام</a></li>
+                            </ul>
+                        </li>
+                        @else
+                            <li class="drop"><a href="#" style="color:blue ;font-weight:bold;">ناحیه کاربری</a>
+                                <ul class="drop-down">
+                                    <li><a href="/dashboard">پروفایل کاربری</a></li>
+                                    <li>
+    
+    
+                                        <a class="dropdown-item" style="text-align:right" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                                            خروج
+                                        </a>
+    
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                        {{--<a class="dropdown-item" style="text-align:right" href="logout">--}}
+                                            {{--خروج--}}
+                                        {{--</a>--}}
+                                        {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+                                            {{--{{ csrf_field() }}--}}
+                                        {{--</form>--}}
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
                     <li><a href="/contact/create">تماس با ما</a></li>
                     <li><a href="{{ url('about')}}">درباره ما</a></li>
 
-                    @if (Auth::guest())
-                    <li class="drop"><a href="#">ورود/ثبت نام</a>
-                        <ul class="drop-down">
-                            <li><a href="/login">ورود</a></li>
-                            <li><a href="/register">ثبت نام</a></li>
-                        </ul>
-                    </li>
-                    @else
-                        <li class="drop"><a href="#">ناحیه کاربری</a>
-                            <ul class="drop-down">
-                                <li><a href="/dashboard">پروفایل کاربری</a></li>
-                                <li>
-
-
-                                    <a class="dropdown-item" style="text-align:right" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                      document.getElementById('logout-form').submit();">
-                                        خروج
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                    {{--<a class="dropdown-item" style="text-align:right" href="logout">--}}
-                                        {{--خروج--}}
-                                    {{--</a>--}}
-                                    {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-                                        {{--{{ csrf_field() }}--}}
-                                    {{--</form>--}}
-                                </li>
-                            </ul>
-                        </li>
-                    @endif
+                   
 
 
                     <li><a href="/blog">وبلاگ</a></li>
