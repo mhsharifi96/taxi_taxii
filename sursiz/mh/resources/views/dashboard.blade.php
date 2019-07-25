@@ -60,19 +60,21 @@
 		    <div class="card margin-card">
 		        <div class="card-body" style="min-height:55vh;">
 		            <div class="row">
-                        <div class="col-md-6" style="text-align:left">
-                            <a href="posts/create">
-                                <button  type="button"  class="btn btn-primary " style="margin-left:30px ">درخواست جدید</button>
-                            </a>
-
-                        </div>
-		                <div class="col-md-3">
-
-		                </div>
-
                         <div class="col-md-3">
                             <h4>پست ها</h4>
                         </div>
+
+		                <div class="col-md-6">
+
+		                </div>
+                        <div class="col-md-3" style="text-align: center">
+                            <a href="posts/create">
+                                <button  type="button"  class="btn btn-primary " >درخواست جدید</button>
+                            </a>
+
+                        </div>
+
+
 
 		                
 		            </div>
@@ -90,11 +92,11 @@
                                        </div>
                                     </th>   --}}
                                     <th class="th-size" style="text-align: right">موضوع</th>
-                                    <th class="col-show th-size" style="text-align: right">نویسنده</th>
+                                    {{--<th class="col-show th-size" style="text-align: right">نویسنده</th>--}}
                                     <th class="th-size" style="text-align: right">دسته</th>
                                     {{--<th>تگ</th>--}}
-                                    <th class="col-show th-size" style="text-align: right">تعداد کامنت</th>
-                                    <th class="th-size" style="text-align: right">  تاریخ ایجاد</th>
+                                    <th class="col-show th-size" style="text-align: right">نظرات</th>
+                                    {{--<th class="th-size" style="text-align: right">تاریخ ایجاد</th>--}}
                                     <th class="th-size" style="text-align: right">وضعیت</th>
                                     <th class="th-size" style="text-align: right">ویرایش</th>
 
@@ -114,10 +116,10 @@
                                        </div>
                                     </td>   --}}
                                     <td class="td-conf"><small>{!!str_limit($post->title,12)!!}</small></td>
-                                    <td class="col-show td-conf"><small>{{$post->user->name}}</small></td>
+                                    {{--<td class="col-show td-conf"><small>{{$post->user->name}}</small></td>--}}
                                     <td class="td-conf"><small>{{$post->category->name}}</small></td>
                                     {{--<td><small>Admin</small></td>--}}
-                                    <td class="col-show td-conf"><small>
+                                    <td class="col-show td-conf" ><small>
                                                 <?php
                                                      $count=0;
                                                     foreach ($results as $result){
@@ -129,11 +131,9 @@
                                                     }
                                                 print($count);
                                                 ?>
-                                                {{--@foreach($results as $result)--}}
-                                                {{--{{count($results)}}--}}
-                                                {{--@endforeach--}}
+
                                                 </small></td>
-                                    <td class="td-conf"><small>{{$post->created_at}}</small></td>
+                                    {{--<td class="td-conf"><small>{{$post->created_at}}</small></td>--}}
                                      <td class="td-conf"><small>
                                                  <?php
                                                  if($post->available=='1'){

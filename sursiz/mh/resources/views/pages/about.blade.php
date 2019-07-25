@@ -121,19 +121,25 @@
         <div class="about-box">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="about-us-text">
-                            <h3>تاریخچه </h3>
-                            <div class="inner-box">
-                                <img alt="" src="upload/about.jpg">
-                                {{--<p><span>لورم ایپسوم یا طرح‌نما </span>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد</p>--}}
-                                <p>
-                                    <span>سورنا</span>
-                                    <br>
-                                    یه تیم تازه تاسیس با جوان های مستعد که هر روزه به دنبال گسترش حیطه ی کاری می باشد
 
-                                </p>
-                            </div>
+                    <div class="col-md-4">
+                        <div class="company-mission">
+                            <h3>ماموریت شرکت</h3>
+                            <span class="icon"></span>
+                            <p><span>اولین تاکسی ذهنی در ایران</span>
+                                <br>
+                                <h>
+                                    sursiz جایی برای شتاب دادن به ذهن
+                                </h>
+                                <br>
+                                در ایستگاه sursiz معتقدیم افراد زیادی در دنیای پیرامون ما، اهداف مشترکی با دیدگاه های متفاوتی دارند.
+
+                                اگر می خواهید در زندگی خود موفق شوید بهتر است با گرفتن یک تاکسی ذهنی sursiz در این راه طولانی ،از تجربیات سایر مسافران این مسیر بهره ببرید.
+
+                                sursiz از دوکلمه ی sur و siz تشکیل شده است sur به معنی اسب و siz به معنای تندرو می باشد.
+
+
+                            </p>
                         </div>
                     </div>
 
@@ -165,26 +171,24 @@
                         </div>
                     </div>
 
+
+
                     <div class="col-md-4">
-                        <div class="company-mission">
-                            <h3>ماموریت شرکت</h3>
-                            <span class="icon"></span>
-                            <p><span>اولین تاکسی ذهنی در ایران</span>
-                                <br>
-                                <h>
-                                       sursiz جایی برای شتاب دادن به ذهن
-                                </h>
-                                <br>
-                                در ایستگاه sursiz معتقدیم افراد زیادی در دنیای پیرامون ما، اهداف مشترکی با دیدگاه های متفاوتی دارند.
+                        <div class="about-us-text">
+                            <h3>تاریخچه </h3>
+                            <div class="inner-box">
+                                <img alt="" src="upload/about.jpg">
+                                {{--<p><span>لورم ایپسوم یا طرح‌نما </span>لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد</p>--}}
+                                <p>
+                                    <span>سورنا</span>
+                                    <br>
+                                    یه تیم تازه تاسیس با جوان های مستعد که هر روزه به دنبال گسترش حیطه ی کاری می باشد
 
-                                اگر می خواهید در زندگی خود موفق شوید بهتر است با گرفتن یک تاکسی ذهنی sursiz در این راه طولانی ،از تجربیات سایر مسافران این مسیر بهره ببرید.
-
-                                sursiz از دوکلمه ی sur و siz تشکیل شده است sur به معنی اسب و siz به معنای تندرو می باشد.
-
-
-                            </p>
+                                </p>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -260,6 +264,50 @@
                                 <img alt="" src="image/seyed.jpg">
                             </div>
                         </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="staff-post">
+                            <div class="staff-post-content">
+                                <h5>محمد جواد نعمتی</h5>
+                                <span>برنامه نویس و توسعه دهنده ی وب سایت</span>
+                            </div>
+                            <div class="staff-post-gal">
+                                <ul class="staf-social">
+                                    <li><a class="pinterest" style="text-align: center" href="https://t.me/Badrex"><i class="fa fa-telegram"></i></a></li>
+                                    <li><a class="instagram" style="text-align: center" href="https://www.instagram.com/badrex123"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                                <img alt="" src="image/badrex.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="staff-post">
+                            <div class="staff-post-content">
+                                <h5>محمد مهدی سرمدی</h5>
+                                <span>برنامه نویس و توسعه دهنده ی اپلیکیشن </span>
+                            </div>
+                            <div class="staff-post-gal">
+                                <ul class="staf-social">
+                                    <li><a class="pinterest" style="text-align: center" href="https://t.me/mhs969"><i class="fa fa-telegram"></i></a></li>
+                                    <li><a class="instagram" style="text-align: center" href="https://www.instagram.com/mh.sh76"><i class="fa fa-instagram"></i></a></li>
+
+                                </ul>
+                                <img alt="" src="image/mamad.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+
                     </div>
 
                 </div>
