@@ -281,10 +281,10 @@
                             </div>
                             <div class="staff-post-gal">
                                 <ul class="staf-social">
-                                    <li><a class="pinterest" style="text-align: center" href="https://t.me/Badrex"><i class="fa fa-telegram"></i></a></li>
-                                    <li><a class="instagram" style="text-align: center" href="https://www.instagram.com/badrex123"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a class="pinterest" style="text-align: center" href="#"><i class="fa fa-telegram"></i></a></li>
+                                    <li><a class="instagram" style="text-align: center" href="https://www.instagram.com/mohammad.javad.nemati"><i class="fa fa-instagram"></i></a></li>
                                 </ul>
-                                <img alt="" src="image/badrex.jpg">
+                                <img alt="" src="image/javad.jpg">
                             </div>
                         </div>
                     </div>
@@ -297,11 +297,11 @@
                             </div>
                             <div class="staff-post-gal">
                                 <ul class="staf-social">
-                                    <li><a class="pinterest" style="text-align: center" href="https://t.me/mhs969"><i class="fa fa-telegram"></i></a></li>
-                                    <li><a class="instagram" style="text-align: center" href="https://www.instagram.com/mh.sh76"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a class="pinterest" style="text-align: center" href="#"><i class="fa fa-telegram"></i></a></li>
+                                    <li><a class="instagram" style="text-align: center" href="#"><i class="fa fa-instagram"></i></a></li>
 
                                 </ul>
-                                <img alt="" src="image/mamad.jpg">
+                                <img alt="" src="image/mehdi.png">
                             </div>
                         </div>
                     </div>
