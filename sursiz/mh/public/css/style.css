@@ -1025,6 +1025,7 @@ a.read-more {
     -o-transition: all 0.17s ease-in-out;
     text-transform: lowercase;
     text-decoration: none;
+    text-align: center;
 }
 
 a.read-more i {
@@ -1895,6 +1896,7 @@ ul.page-tree li a {
     -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
+    direction: rtl;
 }
 
 ul.filter {
@@ -4005,7 +4007,7 @@ element {
 .panel-title {
 
     line-height: 1.7;
-    color: #7c0dca;
+    /*color: #7c0dca;*/
     margin: 3px;
     margin-bottom: 3px;
 
@@ -4038,4 +4040,37 @@ element {
     border-bottom-left-radius: 0.25rem;
     font-family: iranyekan;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+ul.social-icons-nav {
+    /*float: left;*/
+    text-align: left;
+
+}
+
+ul.social-icons-nav li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+ul.social-icons-nav li a {
+    display: inline-block;
+    margin-bottom: -2px;
+    transition: all 0.17s ease-in-out;
+    -moz-transition: all 0.17s ease-in-out;
+    -webkit-transition: all 0.17s ease-in-out;
+    -o-transition: all 0.17s ease-in-out;
+}
+
+ul.social-icons-nav li a i {
+    font-size: 17px;
+    color: #0077f9;
+}
+
+ul.social-icons-nav li a:hover {
+    transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
 }

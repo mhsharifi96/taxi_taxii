@@ -20,7 +20,7 @@ class PagesController extends Controller
 
 
         $title = 'Welcome To Laravel!';
-        $posts = Post::latest()->orderBy('created_at','desc')->where('available','=',1)->paginate(8);
+        $posts = Post::latest()->orderBy('created_at','desc')->where('available','=',1)->paginate(6);
         $blogs=Blog::latest()->orderby('created_at','desc')->paginate(8);
         //return view('pages.index', compact('title'));
        return view('pages.index')->with('posts',$posts)->with('title', $title)->with('blogs',$blogs);

@@ -26,8 +26,8 @@
                     <div class="col-md-3 sidebar">
                         <div class="sidebar-widgets">
                             <div class="search-widget widget">
-                                <form>
-                                    <input type="search" placeholder="... جستجو "/>
+                                <form action="/search" method="get">
+                                    <input  placeholder=" ...جستجو " type="search" name="search"  aria-label="Search">
                                     <button type="submit">
                                         <i class="fa fa-search"></i>
                                     </button>
@@ -40,7 +40,7 @@
 
                                     <div class="accord-elem active">
                                         <div class="accord-title">
-                                            <h5><i class="fa fa-question"></i>سورسیز چیست</h5>
+                                            <h5><img src="image/question-solid.png" height="15px">سورسیز چیست</h5>
                                             <a class="accord-link" href="#"></a>
                                         </div>
                                         <div class="accord-content">
@@ -50,7 +50,7 @@
 
                                     <div class="accord-elem">
                                         <div class="accord-title">
-                                            <h5><i class="fa fa-question"></i>تاکسی ذهنی چیست</h5>
+                                            <h5><img src="image/question-solid.png" height="15px">تاکسی ذهنی چیست</h5>
                                             <a class="accord-link" href="#"></a>
                                         </div>
                                         <div class="accord-content">
@@ -60,7 +60,7 @@
 
                                     <div class="accord-elem">
                                         <div class="accord-title">
-                                            <h5><i class="fa fa-question"></i>اهداف ما </h5>
+                                            <h5>  <img src="image/question-solid.png" height="15px">اهداف ما  </h5>
                                             <a class="accord-link" href="#"></a>
                                         </div>
                                         <div class="accord-content">
@@ -75,12 +75,10 @@
                             <div class="tags-widget widget">
                                 <h5>تگ ها</h5>
                                 <ul class="tag-widget-list">
-                                    <li><a href="#">طراحی سایت</a></li>
-                                    <li><a href="#">کدنویسی</a></li>
-                                    <li><a href="#">وردپرس</a></li>
-                                    <li><a href="#">سئو</a></li>
-                                    <li><a href="#">php</a></li>
-                                    <li><a href="#">فتوشاپ</a></li>
+                                    <a href="/" title="ییی" class="label label-default" target="_blank">sursiz</a>
+                                    <a href="/" title="ییی" class="label label-default" target="_blank">تاکسی ذهنی</a>
+                                    <a href="/posts" title="ییی" class="label label-default" target="_blank">درخواست</a>
+                                    <a href="/blog" title="ییی" class="label label-default" target="_blank">وبلاگ</a>
                                 </ul>
                             </div>
 
@@ -92,37 +90,21 @@
                     <div class="col-md-9 blog-side">
 
                             @foreach($blogs as $blog)
-                            {{--<div class="col-md-6">--}}
-                                {{--<div class="item news-item">--}}
-                                    {{--<div class="inner-item">--}}
-                                        {{--<img alt="" src="{{$blog->image}}">--}}
-                                        {{--<div class="hover-item">--}}
-                                            {{--<ul>--}}
-                                                {{--<li><a class="autor" href="#"><i class="fa fa-user"></i>موضوع</a></li>--}}
-                                                {{--<li><a class="date" href="#"><i class="fa fa-clock-o"></i> ٤ آبان, ١٣٩٤</a></li>--}}
-                                                {{--<li><a class="comment-numb" href="#"><i class="fa fa-comments"></i> ١٦ نظر</a></li>--}}
-                                            {{--</ul>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                    {{--<h5>{{$blog->title}}</h5>--}}
-                                    {{--<p>{{$blog->body}}</p>--}}
-                                    {{--<a class="read-more" href="single-post.html"><i class="fa fa-arrow-left"></i>اطلاعات بیشتر</a>--}}
-
-                                {{--</div>--}}
-                            {{--</div>--}}
-
                             <div class="item news-item">
                                 <div class="inner-item">
                                     <img alt="" src="{{$blog->image}}" >
                                     <div class="hover-item">
+                                        <?php
+                                        $temp = explode(' ',$blog->created_at);
+                                        ?>
                                         <ul>
-                                            <li><a class="date" href="#"><i class="fa fa-clock-o"></i> {{$blog->day}}:{{$blog->created_at}}</a></li>
+                                            <li><a class="date" href="#"><i class="fa fa-clock-o"></i> {{$blog->day}} : {{$temp[0]}}</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <h3>{{$blog->title}}</h3>
-                                <p>{!!str_limit($blog->body,350)!!}</p>
-                                <a class="read-more" href="blog/{{$blog->id}}"><i class="fa fa-arrow-left"></i>اطلاعات بیشتر</a>
+                                <h4><a href="blog/{{$blog->id}}">{{$blog->title}}</a></h4>
+                                <p style="margin-top: 10px">{!!str_limit($blog->body,350)!!}</p>
+                                <a class="read-more" href="blog/{{$blog->id}}" >اطلاعات بیشتر</a>
                             </div>
 
                              @endforeach
