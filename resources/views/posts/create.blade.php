@@ -1,6 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+
+    <div id="content">
+
+        <!-- Page Banner -->
+        <div class="page-banner" style="margin-top: 150px;">
+            <div class="container">
+                <h2>پروژه</h2>
+                <ul class="page-tree">
+                    <li><a href="#">پروژه</a></li>
+                    <li><a href="portfolio-2col.html">نمونه کار</a></li>
+                    <li><a href="index.html">صفحه نخست</a></li>
+                </ul>
+            </div>
+        </div>
 <div class="container create-class">
     <h1>درخواست تاکسی ذهنی</h1>
     {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
@@ -68,12 +82,12 @@
             {{Form::label('body', 'توضیحات')}}
             {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'تاکسی تاکسی اولین تاکسی ذهنی در ایران'])}}
         </div>
-        {{-- <div class="col-md-6 col-12">
+         <div class="col-md-6 col-12">
             <div class="form-group">
                 <lable  class="control-label bold-class">عکس</lable>
-                {{Form::file('cover_image')}}
+                {{Form::file('image')}}
             </div>
-        </div> --}}
+        </div>
         <div>
                 {{Form::submit('ارسال', ['class'=>'btn btn-primary'])}}
         </div>
@@ -81,6 +95,7 @@
     {!! Form::close() !!}
 
 </div>
+    </div>
 
 
 @endsection

@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->string('account')->nullable();
             $table->boolean( 'available')->default(2);
             $table->integer('category_id')->unsigned();
+            $table->string('image');
 
 
             // $table->integer('comment_id')->unsigned();

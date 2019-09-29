@@ -1,5 +1,5 @@
 @component('mail::message')
-##ایمیل فعال سازی sfas
+##ایمیل فعال سازی 
 
 [لینک فعال سازی]({{route('activation.account',$code)}}) - The web framework used
      {{--<a href="{{route('activation.account',$code)}}">فعال سازی</a>--}}

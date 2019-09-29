@@ -1,6 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+    <div id="content">
+
+        <!-- Page Banner -->
+        <div class="page-banner">
+            <div class="container">
+                <h2>پروژه</h2>
+                <ul class="page-tree">
+                    <li><a href="#">پروژه</a></li>
+                    <li><a href="portfolio-2col.html">نمونه کار</a></li>
+                    <li><a href="index.html">صفحه نخست</a></li>
+                </ul>
+            </div>
+        </div>
 <div class="container">
     <h1>ویرایش درخواست</h1>
     {!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
@@ -86,4 +99,5 @@
         
     {!! Form::close() !!}
 </div>
+    </div>
 @endsection

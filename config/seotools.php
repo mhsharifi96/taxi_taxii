@@ -11,6 +11,7 @@ return [
             'separator'    => ' - ',
             'keywords'     => [],
             'canonical'    => false, // Set null for using Url::current(), set false to total remove
+            'robots'       => false, // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
         ],
 
         /*
@@ -29,8 +30,8 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'Over 9000 Thousand!', // set false to total remove
-            'description' => 'For those who helped create the Genki Dama', // set false to total remove
+            'title'       => "sursiz|اولین تاکسی ذهنی درایران", // set false to total remove
+            'description' => 'اولین تاکسی ذهنی ایران ... درخواست هایتان را با دوستانتان در میان بگذارید', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'site_name'   => false,

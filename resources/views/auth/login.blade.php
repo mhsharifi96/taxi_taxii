@@ -87,45 +87,62 @@
   </div>
 @endif
 
+<div id="content">
 
-<div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin my-5">
-          <div class="card-body">
-            <h5 class="card-title text-center">ورود</h5>
-            <form class="form-signin" role="form" method="POST" action="{{ route('login') }}">
-                {{ csrf_field() }}
-              <div class="form-label-group">
-                <input type="email" id="email" name="email" class="form-control" placeholder="Email address" value="{{ old('email') }}" required autofocus>
-                
-                <label for="inputEmail">ایمیل</label>
-              </div>
-
-              <div class="form-label-group">
-                <input type="password" id="password" class="form-control" placeholder="Password" name="password"  required>
-                
-                <label for="password">رمز عبور</label>
-                
-              </div>
-
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Remember password</label>
-              </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">ورود</button>
-              {{-- <hr class="my-4"> --}}
-              
-              <div class="border-top card-body text-center">رمز عبور خود را فراموش کرده اید؟ <a href="{{ route('password.request') }}"> اره </a></div>
-              {{-- <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
-              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button> --}}
-              <div class="border-top card-body text-center">هنوز ثبت نام نکرده‌اید؟ <a href="/register">ثبت نام</a></div>
-            </form>
-          </div>
+  <!-- Page Banner -->
+      <div class="page-banner" style="margin-top: 150px;">
+        <div class="container">
+          <h2>پروژه</h2>
+          <ul class="page-tree">
+            <li><a href="/login">ورود</a></li>
+            <li><a href="/">صفحه نخست</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
+
+      <div class="container">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 ">
+              <div class="card card-signin my-5">
+                <div class="card-body">
+                  <h5 class="card-title text-center">ورود</h5>
+                  <form class="form-signin" role="form" method="POST" action="{{ route('login') }}">
+                      {{ csrf_field() }}
+                    <div class="form-label-group">
+                      <label for="inputEmail">ایمیل</label>
+                      <input type="email" id="email" name="email" class="form-control" placeholder="Email address" value="{{ old('email') }}" required autofocus>
+
+
+                    </div>
+
+                    <div class="form-label-group">
+                      <label for="password">رمز عبور</label>
+                      <input type="password" id="password" class="form-control" placeholder="Password" name="password"  required>
+
+
+
+                    </div>
+
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                      <label class="custom-control-label" for="customCheck1">Remember password</label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">ورود</button>
+                    {{-- <hr class="my-4"> --}}
+
+                    <div class="border-top card-body text-center">رمز عبور خود را فراموش کرده اید؟ <a href="{{ route('password.request') }}"> اره </a></div>
+                    {{-- <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button> --}}
+                    <div class="border-top card-body text-center">هنوز ثبت نام نکرده‌اید؟ <a href="/register">ثبت نام</a></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</div>
 @endsection
 
 

@@ -74,6 +74,22 @@
     </div>
 </div> --}}
 
+
+<div id="content">
+
+    <!-- Page Banner -->
+    <div class="page-banner" style="margin-top: 150px;">
+        <div class="container">
+            <h2>پروژه</h2>
+            <ul class="page-tree">
+                <li><a href="/register">ثبت نام</a></li>
+                <li><a href="/">صفحه نخست</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
 <div class="container">
     {{-- <br>   --}}
     
@@ -82,6 +98,7 @@
     
     
     <div class="row justify-content-center">
+        <div class="col-md-3"></div>
     <div class="col-md-6">
     <div class="card margin-card">
     <header class="card-header">
@@ -182,5 +199,5 @@
     </div> 
     <!--container end.//-->
     
-    
+</div>
 @endsection

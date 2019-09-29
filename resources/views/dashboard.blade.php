@@ -39,6 +39,20 @@
     </div>
 </div> --}}
 {{-- new template --}}
+
+
+<div id="content">
+
+    <!-- Page Banner -->
+    <div class="page-banner" style="margin-top:150px;">
+        <div class="container">
+            <h2>داشبورد</h2>
+            <ul class="page-tree">
+                <li><a href="/dashboard">داشبورد</a></li>
+                <li><a href="/">صفحه نخست</a></li>
+            </ul>
+        </div>
+    </div>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-2"></div>
@@ -46,15 +60,22 @@
 		    <div class="card margin-card">
 		        <div class="card-body" style="min-height:55vh;">
 		            <div class="row">
-		                <div class="col-md-2 border-right">
-		                    <h4>پست ها</h4>
-		                </div>
-		                <div class="col-md-6 mr-auto" style="text-align:left">
-                            <a href="posts/create">
-                                <button  type="button"  class="btn btn-sm btn-primary ">درخواست جدید</button>
-                            </a>
+                        <div class="col-md-3">
+                            <h4>پست ها</h4>
+                        </div>
+
+		                <div class="col-md-5">
 
 		                </div>
+                        <div class="col-md-4" style="text-align: center">
+                            <a href="posts/create">
+                                <button  type="button"  class="btn btn-primary " >درخواست جدید</button>
+                            </a>
+
+                        </div>
+
+
+
 		                
 		            </div>
 		            <div class="row">
@@ -70,14 +91,14 @@
                                            </label>
                                        </div>
                                     </th>   --}}
-                                    <th class="th-size">موضوع</th>
-                                    <th class="col-show th-size">نویسنده</th>
-                                    <th class="th-size">دسته</th>
+                                    <th class="th-size" style="text-align: right">موضوع</th>
+                                    {{--<th class="col-show th-size" style="text-align: right">نویسنده</th>--}}
+                                    <th class="th-size" style="text-align: right">دسته</th>
                                     {{--<th>تگ</th>--}}
-                                    <th class="col-show th-size">تعداد کامت</th>
-                                    <th class="th-size">  تاریخ ایجاد</th>
-                                    <th class="th-size">وضعیت</th>
-                                    <th class="th-size">ویرایش</th>
+                                    <th class="col-show th-size" style="text-align: right">نظرات</th>
+                                    {{--<th class="th-size" style="text-align: right">تاریخ ایجاد</th>--}}
+                                    <th class="th-size" style="text-align: right">وضعیت</th>
+                                    <th class="th-size" style="text-align: right">ویرایش</th>
 
 
                                   </tr>
@@ -95,10 +116,10 @@
                                        </div>
                                     </td>   --}}
                                     <td class="td-conf"><small>{!!str_limit($post->title,12)!!}</small></td>
-                                    <td class="col-show td-conf"><small>{{$post->user->name}}</small></td>
+                                    {{--<td class="col-show td-conf"><small>{{$post->user->name}}</small></td>--}}
                                     <td class="td-conf"><small>{{$post->category->name}}</small></td>
                                     {{--<td><small>Admin</small></td>--}}
-                                    <td class="col-show td-conf"><small>
+                                    <td class="col-show td-conf" ><small>
                                                 <?php
                                                      $count=0;
                                                     foreach ($results as $result){
@@ -110,11 +131,9 @@
                                                     }
                                                 print($count);
                                                 ?>
-                                                {{--@foreach($results as $result)--}}
-                                                {{--{{count($results)}}--}}
-                                                {{--@endforeach--}}
+
                                                 </small></td>
-                                    <td class="td-conf"><small>{{$post->created_at}}</small></td>
+                                    {{--<td class="td-conf"><small>{{$post->created_at}}</small></td>--}}
                                      <td class="td-conf"><small>
                                                  <?php
                                                  if($post->available=='1'){
@@ -173,12 +192,15 @@
 		    </div>
         </div>
         <div class="col-md-12">
-            <div class="col-md-3" style=" margin-left: auto; margin-right: auto;">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" style="text-align: center">
                 <span> {{ $posts->links( "pagination::bootstrap-4") }}</span>
             </div>
+            <div class="col-md-4"></div>
 
         </div>
 	</div>
+</div>
 </div>
 @endsection
 

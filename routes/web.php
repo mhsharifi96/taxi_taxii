@@ -1,8 +1,5 @@
 <?php
-use Spatie\Sitemap\SitemapGenerator;
-use Carbon\Carbon;
-use Spatie\Sitemap\Sitemap;
-use Spatie\Sitemap\Tags\Url;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +11,8 @@ use Spatie\Sitemap\Tags\Url;
 |
 */
 
-
 Route::get('/', function () {
-    //event(new \App\Events\UserActivation(App\User::find(1)));
+    event(new \App\Events\UserActivation(App\User::find(1)));
     return 'done';
 });
 
@@ -41,18 +37,24 @@ Route::get('/sitemap', function () {
     return ('sucess, created sitemap :)');
 
 });
+
 Route::get('/about', 'PagesController@about');
 //Route::get('/about', 'PagesController@about');
 Route::get('/services' , 'PagesController@services');
-
+//Route::get('posts/{category}','CategoryController@index');
 Route::resource('posts', 'PostsController');
+
 Route::resource('categories','CategoryController');
 Route::resource('comments','CommentController');
 Route::resource('contact','ContactController');
 Route::resource('footer','FooterController');
+Route::resource('blog','BlogController');
+
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/search','PostsController@search');
 
+
 // Add sitemap route
+

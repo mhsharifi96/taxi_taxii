@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\ActivationCode;
+use App\Blog;
+use App\Post;
 use Carbon\Carbon;
 use SEOMeta;
 use Twitter;
@@ -11,22 +13,24 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-        SEOMeta::setTitle('sursiz');
-        SEOMeta::setDescription('اولین تاکسی ذهنی درایران');
-        Twitter::setTitle('Homepage');
-        Twitter::setSite('@taxitaxii1');
+         SEOMeta::setTitle('sursiz');
+         SEOMeta::setDescription('اولین تاکسی ذهنی درایران');
+         Twitter::setTitle('Homepage');
+         Twitter::setSite('@taxitaxii1');
 
 
         $title = 'Welcome To Laravel!';
+        $posts = Post::latest()->orderBy('created_at','desc')->where('available','=',1)->paginate(6);
+        $blogs=Blog::latest()->orderby('created_at','desc')->paginate(8);
         //return view('pages.index', compact('title'));
-        return view('pages.index')->with('title', $title);
+       return view('pages.index')->with('posts',$posts)->with('title', $title)->with('blogs',$blogs);
     }
 
     public function about(){
         $title = 'About Us';
-        SEOMeta::setTitle('درباره ما |sursiz ');
-        SEOMeta::setDescription('در ین صفحه می توانید درباره ی تیم ما اطلاعاتی کسب کنید');
-        SEOMeta::addKeyword(['sursiz', 'taxi', 'درباره ما','تاکسی ذهنی','تیم ما']);
+         SEOMeta::setTitle('درباره ما |sursiz ');
+         SEOMeta::setDescription('در ین صفحه می توانید درباره ی تیم ما اطلاعاتی کسب کنید');
+         SEOMeta::addKeyword(['sursiz', 'taxi', 'درباره ما','تاکسی ذهنی','تیم ما']);
         return view('pages.about')->with('title', $title);
     }
 

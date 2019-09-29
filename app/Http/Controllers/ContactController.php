@@ -25,9 +25,9 @@ class ContactController extends Controller
      */
     public function create()
     {
-        SEOMeta::setTitle('ارتباط با ما |sursiz ');
-        SEOMeta::setDescription('  در این صفحه می توانید با ما در ارتباط باشید.');
-        SEOMeta::addKeyword(['sursiz', 'taxi', 'ارتباط با ما','تاکسی ذهنی','تیم ما']);
+         SEOMeta::setTitle('ارتباط با ما |sursiz ');
+         SEOMeta::setDescription('  در این صفحه می توانید با ما در ارتباط باشید.');
+         SEOMeta::addKeyword(['sursiz', 'taxi', 'ارتباط با ما','تاکسی ذهنی','تیم ما']);
 
         return view('contact');
     }

@@ -1,5 +1,4 @@
 
-
 @if(count($errors) > 0)
     <div class="container">
     @foreach($errors->all() as $error)
@@ -21,3 +20,4 @@
     </div>
 </div>
 @endif
+

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -12,9 +14,15 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($category)
     {
-        //
+//        $posts =DB::select('SELECT * FROM posts as p
+//        INNER JOIN categories as c ON p.category_id = c.id
+//        where c.name =?',[$category]);
+
+
+        $posts=Post::all()->where('category.name','=',$category);
+        return view('category.index',compact('posts'));
     }
 
     /**
@@ -54,9 +62,9 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+
     }
 
     /**
@@ -92,4 +100,5 @@ class CategoryController extends Controller
     {
         //
     }
+
 }

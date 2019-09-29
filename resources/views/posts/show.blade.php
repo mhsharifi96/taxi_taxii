@@ -1,194 +1,262 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    {{-- <a href="/posts" class="btn btn-default">بازگشت</a> --}}
+
+
+<div id="content">
+
+    <!-- Page Banner -->
+    <div class="page-banner" style="margin-top: 150px;">
+        <div class="container">
+            <h2>درخواست</h2>
+            <ul class="page-tree">
+                <li><a href="{{$post->id}}">{!!str_limit($post->title,15)!!}</a></li>
+                <li><a href="/posts">درخواست ها</a></li>
+                <li><a href="/">صفحه نخست</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- blog-box Banner -->
     <?php
-    $pic=array('500-1.png','500-2.png','500-3.png','500-4.png','500-5.png','500-6.png','500-7.png');
+//    $pic=array('500-1.png','500-2.png','500-3.png','500-4.png','500-5.png','500-6.png','500-7.png');
+    $pic=array('13.png','14.png','22.png','33.png','44.png','55.png','66.png');
     shuffle($pic);
     ?>
-
     <?php
     $i=rand(0,count($pic)-1);
     ?>
 
+    <div class="single-project-page">
+        <div class="container">
+            <div class="row">
 
-    <h1>{{$post->title}}</h1>
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-8">
-                    {!!$post->body!!}
-            </div>
-            <div class="col-md-4">
-                    {{-- <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}"> --}}
-                    <div class="col-md-12">
 
-                        {{--<img style="width:100%" class="card-img-top" src="{{url('image/noimage.jpg ')}}">--}}
-                        <img style="width:100%;" src="{{url('image/'.$pic[$i].' ')}}">
-                    </div>
-                @if(!$post->account  ==null)
-                    <div class="col-md-12">
-                        <p style="text-align:center">
-                            ایدی/ایمیل مسافر:
-                            @if(!Auth::guest())
+                <div class="col-md-3 sidebar">
+                    <div class="sidebar-widgets">
 
-                            <span>
-                            {{$post->account}}
+                        <div class="search-widget widget" style="margin-top: 20px">
+                            <form action="/search" method="get">
+                                <input  placeholder=" ...جستجو " type="search" name="search"  aria-label="Search">
+                                <button type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="tags-widget widget">
+                            <h5>تگ ها</h5>
+                            <span class="tag">
+                                 <?php  $x=explode(",", $post->tag);
+                                ?>
+
+                                @for($i=0;$i<count($x);$i++)
+                                         <a href="" title="" class="label label-default" target="_blank"><?php echo $x[$i] ?></a>
+
+                                @endfor
+                                <a href="" title="" class="label label-default" target="_blank">درخواست ها</a>
+                                <a href="" title="" class="label label-default" target="_blank">دسته ها</a>
                             </span>
+                        </div>
 
-                            @else
-                            <p class="alarm-account">برای مشاهده ابتدا در سایت عضو شوید :/</p>
-                            @endif
+
+
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-9">
+
+                    <?php
+                    $picture=array('1.png','2.png','3.png','4.png','5.png','6.png');
+                    shuffle($picture);
+                    ?>
+                    <?php
+                    $j=rand(0,count($picture)-1);
+                    ?>
+
+
+
+                    <div class="card_post" style="box-shadow: 5px 5px 5px grey;">
+                        <div class="row ">
+
+                            <div class="col-md-5">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item">
+                                        <img class="d-block" src="{{url('image/'.$picture[$j].' ')}}" alt="" height="200px" width="350px">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-7 px-3">
+                                <div class="card-block px-6" >
+
+                                    <p class="card-text1" >
+                                        مقصد:  {{$post->title}}
+                                      </p>
+                                    <p class="card-text">{{$post->user->name}}   <i class="fa fa-user "></i></p>
+                                    <p class="card-text"> {{$post->created_at}}  <i class="fa fa-calendar"></i></p>
+                                    <p class="card-text">
+
+                                    @if(!$post->account  ==null)
+                                            @if(!Auth::guest())
+                                            {{$post->account}}
+                                            @else
+                                                برای مشاهده ابتدا در سایت عضو شوید :/
+                                            @endif
+                                    @endif
+                                        <i class="far fa-envelope"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Carousel start -->
+
+                            <!-- End of carousel -->
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="card_des" style="box-shadow: 5px 5px 5px grey; min-height: 30%;">
+                      <div class="row item news-item">
+
+                          <h4 style="margin-right: 20px">
+                        :      توضیحات
+                          </h4>
+                          <h1 style="margin-right: 30px; min-height: 20px">
+                              {!!$post->body!!}
+                          </h1>
+
+
+                      </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="latest-projects">
+                <h3 style="margin-top: 50px">آخرین درخواست‌ها</h3>
+                <div class="row">
+
+                        @foreach($posts as $p)
+                        <div class="col-md-4">
+                            <div  class="card" style="min-height:200px;" >
+                            <span>
+                                <div class="col-md-5 " style="text-align: center">
+                                    <img src="../{{$p->image}}" alt="" width="130" height="130" style="border-radius: 10px; margin-top:12%;">
+                                    <a class="btn btn-success"  style=" display:block; position:relative; top: 10px;" href="/posts/{{$p->id}}" role="button">مشاهده</a>  
+
+                                </div>
+                                <div class="col-md-7 card-body">
+                                    
+                                        <a href="/posts/{{$p->id}}">
+                                        <h4 class="card-title" style="text-align:center">{!!str_limit(strip_tags($p->title),45)!!}</h4>
+                                        </a>
+                                        <span>{{$p->category->name}}</span>
+                                        <span style="float:left">{{$p->user->name}}</span> 
+                                        <h3 class="item news-item" style="margin-top: 1rem; font-size: 15px">
+                                        {!!str_limit(strip_tags($p->body),80)!!}
+                                        </h3>
+                                        
+                                        
+                                        
+                                        
+                                </div>
+                                
+                            </span>
+                            </div>
+                        </div>
+
+                    @endforeach
+
+
+
+
+                </div>
+            </div>
+
+
+
+            <div class="comment-section">
+                <h3 style="margin-top:40px ">نظرات </h3>
+
+                <ul class="comment-tree">
+                    @if(count($comments)>0)
+                        @foreach($comments as $comment)
+                            <li>
+                                <div class="comment-box">
+                                    <img alt="" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                                    <div class="comment-content">
+                                        <h6>{{$comment->user->name}}</h6>
+                                        <p>{!! $comment->body !!}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        @endforeach
+                    @else
+                        <p>متاسفانه دیدگاهی برای نمایش وجود ندارد
+                            <img src="{{url('/image/sad.png')}}" alt="surena" style="width: 64px;">
+                        </p>
+                    @endif
+
+
+                </ul>
+            </div>
+
+            <div class="leave-comment">
+                @if(!Auth::guest())
+                    <h3>گذاشتن نظر</h3>
+                    <form class="comment-form" action="{{route('comments.store')}}" method="post">
+                        {{csrf_field()}}
+                        <div class="row">
+
+                            <div class="form-group">
+                                <input type="hidden" name="comment_body" class="form-control" >
+                                <input type="hidden" name="user_id" value="{{ $user->id }}" >
+                            </div>
+
+                            <div class="col-md-4">
+                                <input type="text" name="name" id="name" value="{{$user->name}}">
+                                <input type="text" name="email" value="{{$user->email}}">
+                                <input type="text" name="website" placeholder="وب سایت">
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" name="comment_body" class="form-control" >
+                                <input type="hidden" name="post_id" value="{{ $post->id }}" >
+                            </div>
+
+                            <div class="col-md-8">
+                                {{--<input type="text" id="body" placeholder="متن نظر" name="body">--}}
+                                <textarea placeholder="متن نظر" id="body"  name="body"></textarea>
+                                <input type="submit" value="ارسال">
+                            </div>
+
+                        </div>
+                    </form>
+                @else
+                    <div class="col-md-12">
+                        <h2>
+                            برای ثبت نظر <a href="/register">عضو شوید</a>
+                        </h2>
+                        <p>
                         </p>
                     </div>
                 @endif
-                    
+
             </div>
+
         </div>
     </div>
-    
-    <hr>
-    <small>{{$post->created_at}}</small>
-    <small>درخواست توسط {{$post->user->name}}</small>
-    {{-- <hr> --}}
-    {{--@if(!Auth::guest())--}}
-        {{--@if(Auth::user()->id == $post->user_id)--}}
-            {{--<a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a>--}}
 
-            {{--{!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}--}}
-                {{--{{Form::hidden('_method', 'DELETE')}}--}}
-                {{--{{Form::submit('Delete', ['class' => 'btn btn-danger'])}}--}}
-            {{--{!!Form::close()!!}--}}
-        {{--@endif--}}
-    {{--@endif--}}
-    @if(!$post->account  ==null)
-    @if(!Auth::guest())
-        <small>آیدی: {{$post->account}}</small>
-    @endif
-    @endif
-
-    <hr>
-    {{-- <h1>نظر خود را وارد کنید</h1> --}}
-    <div class="row">
-            <div class="col-md-8 offset-md-2" style="padding-top:2%;margin:auto">
-                    {{-- <h3><small>نظرات</small></h3> --}}
-            
-                    <!-- Tabs with icons on Card -->
-                    <div class="card card-nav-tabs">
-                        <div class="card-header card-header-primary">
-                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-                            <div class="nav-tabs-navigation">
-                                <div class="nav-tabs-wrapper">
-                                    <ul class="nav nav-tabs" data-tabs="tabs">
-                                        <li class="nav-item">
-                                                <a class="nav-link active" href="#messages" data-toggle="tab">
-                                                    {{-- <i class="material-icons">chat</i> --}}
-                                                    دیدگاه‌
-                                                </a>
-                                        </li>
-                                        
-                                        <li class="nav-item">
-                                            <a class="nav-link " href="#profile" data-toggle="tab">
-                                                    ارسال دیدگاه
-                                                
-                                            </a>
-                                        </li>
-                                        
-                                        
-                                        {{-- <li class="nav-item">
-                                            <a class="nav-link" href="#settings" data-toggle="tab">
-                                                <i class="material-icons">build</i>
-                                                Settings
-                                            </a>
-            
-                                        </li> --}}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body ">
-                            <div class="tab-content text-center">
-                                
-                                <div class="tab-pane" id="profile">
-                                    @if(!Auth::guest())
-                                    <h1>دیدگاه خود را وارد کنید</h1>
-                                    {!! Form::open(['action' => 'CommentController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-                                    {{--<div class="form-group">--}}
-                                        {{--{{Form::label('name', 'name')}}--}}
-                                        {{--{{Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'name'])}}--}}
-                                    {{--</div>--}}
-                                    {{--<div class="form-group">--}}
-                                        {{--{{Form::label('email', 'email')}}--}}
-                                        {{--{{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'email'])}}--}}
-                                    {{--</div>--}}
-                                        <div class="form-group">
-                                            <input type="hidden" name="comment_body" class="form-control" />
-                                            <input type="hidden" name="user_id" value="{{ $user->id }}" />
-                                        </div>
-                                    <div class="form-group">
-                                        {{Form::label('body', 'دیدگاه')}}
-                                        {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'دیدگاه'])}}
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="hidden" name="comment_body" class="form-control" />
-                                        <input type="hidden" name="post_id" value="{{ $post->id }}" />
-                                    </div>
-                                    {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
-                                    {!! Form::close() !!}
-                                    @else
-                                    <div class="col-md-12">
-                                        <p>
-                                            برای ثبت نظر <a href="/register">عضو شوید</a>
-                                        </p>
-                                        <p>
-                                        </p>
-                                    </div>
-                                    @endif
-            
-                                </div>
-                                <div class="tab-pane active" id="messages">
-                                        {{-- @foreach($comments as $comment)
-                                        <h4>{{$comment->title}}</h4>
-                                        <h5>{!! $comment->body!!}</h5>
-                                        @endforeach --}}
-                                        @if(count($comments)>0)
-                                        @foreach($comments as $comment)
-                                        <div class="media comment-box">
-                                                <div class="media-left">
-                                                    <a href="#">
-                                                        <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    {{-- <h4 class="">{{$comment->title}}</h4> --}}
-                                                    <h4 class="media-heading">{{$comment->user->name}}</h4>
-                                                    <div class="comment-border">{!! $comment->body!!}</div>
-                                                    {{-- <p>sdfsdf</p> --}}
-                                                  
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                        @else
-                                        <p>متاسفانه دیدگاهی برای نمایش وجود ندارد
-                                            <img src="{{url('/image/sad.png')}}" alt="surena" style="width: 64px;">
-                                        </p>
-                                        
-                                        @endif
-                                        
-                                </div>
-                                {{-- <div class="tab-pane" id="settings">
-                                    <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
-                                </div> --}}
-                            </div>
-                        </div></div>
-                    <!-- End Tabs with icons on Card -->
-            
-                </div>
-    </div>
-    
 </div>
 
 
-   
 
 @endsection

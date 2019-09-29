@@ -27,7 +27,8 @@ class Post extends Model
     }
     public function scopeSearch($query ,$keyword){
         $query->where('title','like','%'.$keyword.'%')
-            ->orwhere('body','like','%'.$keyword.'%');
+            ->orwhere('body','like','%'.$keyword.'%')
+        ;
         return $query;
     }
 
