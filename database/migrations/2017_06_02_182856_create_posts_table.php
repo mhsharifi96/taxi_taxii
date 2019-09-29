@@ -23,16 +23,17 @@ class CreatePostsTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->string('image');
 
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 
             // $table->integer('comment_id')->unsigned();
             $table->timestamps();
         });
 
-        Schema::table('posts', function($table) {
-            // if error in migrate commit  
+        // Schema::table('posts', function($table) {
+        //     // if error in migrate commit  
 
-             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            });
+        //      $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+        //     });
 
 
     }
