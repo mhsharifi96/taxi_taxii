@@ -58,3 +58,8 @@ Route::get('/search','PostsController@search');
 
 // Add sitemap route
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
