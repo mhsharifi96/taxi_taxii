@@ -123,7 +123,7 @@
 
             <div class="col form-group">
                 <label>نام خانوادگی</label>
-                  <input type="text" class="form-control" placeholder="فامیلتون">
+                  <input type="text" class="form-control" placeholder="نام خانوادگی">
             </div> <!-- form-group end.// -->
         </div> <!-- form-row end.// -->
 
@@ -186,10 +186,14 @@
             
             
         </div> <!-- form-group// -->      
-        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
+        {{-- <div class="text-muted" style="
+        direction: ltr;
+        text-align: left;
+        padding: 0px 20px 0;">By clicking the 'Sign Up' button, you confirm that you accept our <br>
+             Terms of use and Privacy Policy.</div>                                           --}}
     </form>
     </article> <!-- card-body end .// -->
-    <div class="border-top card-body text-center">اکانت دارید؟ <a href="/login">Log In</a></div>
+    <div class="border-top card-body text-center">اکانت دارید؟ <a href="/login">ورود</a></div>
     </div> <!-- card.// -->
     </div> <!-- col.//-->
     

@@ -52,13 +52,17 @@
 
 @font-face {
   font-family: 'Vazir';
-  src: url('Vazir.woff2') format('woff2'),
-         url('Vazir.woff') format('woff'),
-         url('Vazir.ttf') format('truetype');
+  src: url('fonts/Vazir.woff2') format('woff2'),
+         url('fonts/Vazir.woff') format('woff'),
+         url('fonts/Vazir.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'iransans';
+    src: url('fonts/IRANSans.woff') format('woff')
+  }
+  
 *{
-    font-family: 'Vazir', 'Segoe UI', Tahoma, sans-serif, 'FontAwesome' !important;
+    font-family: 'iransans','Vazir', 'Segoe UI', Tahoma, sans-serif, 'FontAwesome' !important;
 }
 
 
@@ -79,6 +83,9 @@
 
 header.active .navbar {
     background: rgba(255,255,255,0.9);
+    -webkit-box-shadow: 0px 2px 4px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 4px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 4px -4px rgba(0,0,0,0.75);
 }
 
 .top-line {
@@ -3012,9 +3019,20 @@ footer {
     /*background-color: rgba(48,204,248,1);*/
     /*background: @include filter-gradient(#30ccf8, #1ec9ed, horizontal);*/
     /*background: @include background-image(radial-gradient(center, ellipse cover, rgba(48,204,248,1) 0%, rgba(91,211,241,1) 23%, rgba(14,204,246,1) 56%, rgba(25,201,240,1) 74%, rgba(30,201,237,1) 84%, rgba(39,202,231,1) 100%));*/
-    background-color: #e4e4e4;
+    background-color: #3e4551!important;
 }
-
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6,
+footer ul.tag-widget-list li a,
+footer ul,
+footer a,
+footer p{
+    color:#ffffff;
+}
 .footer-widgets {
     margin-bottom: 30px;
 
@@ -3316,8 +3334,9 @@ p.work-time span {
 .footer-line {
     padding: 10px;
     /*background: #007aff;*/
-    background-color: darkgray;
+    background-color: rgba(0,0,0,.2);
     overflow: hidden;
+    color:#ffff;
 }
 
 .footer-line p {
@@ -3599,15 +3618,17 @@ div.card {
 
 }
 div.card .card-header {
-
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
     border-radius: 3px;
     padding: 1rem 15px;
     margin-left: 15px;
     margin-right: 15px;
     margin-top: -30px;
     border: 0;
-    background: linear-gradient(60deg,#eee,#bdbdbd);
-
+   /* background: linear-gradient(60deg,#eee,#bdbdbd); */
+    background: url('../upload/banner1.jpg') fixed;
 }
 .input-group {
 
@@ -3769,9 +3790,9 @@ div.card {
 
 }
 .card-title {
-
     margin-bottom: .75rem;
-
+    color:#ffff;
+    text-align: center;
 }
 .form-control {
 
@@ -3801,11 +3822,11 @@ label {
 
 @font-face {
     font-family: 'Vazir';
-    src: url('/public/fonts/Vazir.eot');
-    src: url('/public/fonts/Vazir.eot?#iefix') format('embedded-opentype'),
-    url('/public/fonts/Vazir.woff2') format('woff2'),
-    url('/public/fonts/Vazir.woff') format('woff'),
-    url('/public/fonts/Vazir.ttf') format('truetype');
+    src: url('fonts/Vazir.eot');
+    src: url('fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Vazir.woff2') format('woff2'),
+    url('fonts/Vazir.woff') format('woff'),
+    url('fonts/Vazir.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -3967,18 +3988,19 @@ label {
 .dk-footer-form button[type=submit] {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     padding: 12px 24px 12px 17px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    /* border-top-right-radius: 25px; */
+    /* border-bottom-right-radius: 25px; */
     border: 1px solid #007bff;
     background: #007bff;
+    height:36px !important;
     color: #fff; }
 .dk-footer-form button:hover {
     cursor: pointer; }
 
 .footer-col-r{
-    background-color: white;
+    /* background-color: white; */
     text-align: center;
     padding-top: 30px;
 
@@ -4035,7 +4057,7 @@ element {
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
-    border-radius: .25rem;
+    /* border-radius: .25rem; */
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
     font-family: iranyekan;
@@ -4073,4 +4095,25 @@ ul.social-icons-nav li a:hover {
     -webkit-transform: scale(1.4);
     -moz-transform: scale(1.4);
     -o-transform: scale(1.4);
+}
+/***** edition by chavoshipor **/
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    line-height:1.8em;
+}
+.logo{
+    background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5em;
+    -webkit-animation: hue 10s infinite linear;
+    cursor: pointer;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
 }

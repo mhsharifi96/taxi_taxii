@@ -6,7 +6,10 @@
 
 
                 <div class="col-md-3 footer-col-r " style="margin-bottom: 20px" >
-                    <a><img src="../image/surlog.png"></a>
+                    <a>
+                        {{-- <img src="../image/surlog.png"> --}}
+                        <h2 class="logo" style="text-align: center;font-size:2em;">سورسیز</h2>
+                    </a>
                     <div class="card-img-overlay " style="padding-bottom: 20px">
                         <br>
                         <h4 style="text-align: center">همفکر و هم مسیرتو پیدا کن</h4>

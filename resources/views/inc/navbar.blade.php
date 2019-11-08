@@ -32,7 +32,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img alt="" src="{{url('/image/surlog.png')}}"></a>
+                <a class="navbar-brand" href="#">
+                    {{-- <img alt="" src="{{url('/image/surlog.png')}}"> --}}
+                    <h2 class="logo">Sursiz</h2>
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
